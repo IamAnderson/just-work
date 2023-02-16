@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { BsSearch } from 'react-icons/bs'
 import Footer from '../../components/Footer'
-import HeaderTitle from '../../components/Labels/HeaderTitle'
-import LinkHeaderText1 from '../../components/Labels/LinkHeaderText1'
+import HeaderTitle from '../../components/labels/HeaderTitle'
+import LinkHeaderText1 from '../../components/labels/LinkHeaderText1'
 import Navbar from '../../components/Navbar'
 
 const ProjectPaths = () => {
