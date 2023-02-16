@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.navbar_signup__gradient{
+    background: linear-gradient(180deg, #1720E9 0%, #0D58F1 43.23%, #0D58F1 43.24%, #AC00FD 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.dot_title__component{
+    width: 14px;
+    height: 14px;
+    border-radius: 9999px;
+    background: linear-gradient(180deg, #00A2FD 0%, #AC00FD 89.5%);
+}
+
+.explore_component__gradient1{
+    background: linear-gradient(180deg, #00A2FD 0%, #AC00FD 89.5%);
+}
+
+.explore_content_arrow_box__shadow{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.title_box__shadow{
+    box-shadow: 0px 16px 40px rgba(0, 0, 0, 0.25);
+}
+
+.rmore_gradient{
+    background: linear-gradient(180deg, #1720E9 0%, #0D58F1 43.23%, #0D58F1 43.24%, #AC00FD 100%);
+    box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+}
+
+.header_bg__img{
+    background: url("./assets/headerImg.png");
+}
+
+.spiral1_bg__img{
+    background: url("./assets/spiral1.png");
+}
+
+.spiral2_bg__img{
+    background: url("./assets/spiral2.png");
+}
+
+.spiral3_bg__img{
+    background: url("./assets/spiral3.png");
+}
+
+.header_bg__icon_{
+    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.25);
+}
+.header_bg__icon{
+    box-shadow: 0px 2.72px 27.2px rgba(0, 0, 0, 0.25);
+}
+
+.rm__gradient{
+    background: linear-gradient(180deg, #1720E9 0%, #0D58F1 43.23%, #0D58F1 43.24%, #AC00FD 100%);
+    box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.25);
+}
+
+.bg_frame__1{
+    background: url("./assets/bgFrame1.png");
+}
+
+.testimonial_comp__gradient{
+    background: linear-gradient(180deg, #020272 0%, #4F146A 100%);
+}
+
+.sLide{
+    opacity: 0;
+    transition: 0.5s ease all;
+}
+
+.sLide.active{
+    opacity: 1;
+}
+
+.news_comp__gradient{
+    background: linear-gradient(180deg, #1720E9 0%, #0D58F1 43.23%, #0D58F1 43.24%, #AC00FD 100%);
+}
+
+.news_comp__box_shadow{
+    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.25);
+}
+
+.news_btn__gradient{
+    background: linear-gradient(180deg, #1720E9 0%, #0D58F1 43.23%, #0D58F1 43.24%, #AC00FD 100%);
+}
+
+.stats_bg__frame{
+    background: url("./assets/statsBg.png");
+}
+
+
+/* project section */
+.search_box__shadow{
+    box-shadow: 0px 4px 4px #0000001a;
+}
+
+.project_path__search_box__shadow{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/* faq section */
+.accordion_box__shadow{
+    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.06);
+}
