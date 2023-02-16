@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { BsSearch } from 'react-icons/bs'
 import Footer from '../../components/Footer'
-import ExploreComponent from '../../components/HomePage/ExploreComponent'
+import ExploreComponent from '../../components/homePage/ExploreComponent'
 import HeaderTitle from '../../components/labels/HeaderTitle'
 import LinkHeaderText from '../../components/labels/LinkHeaderText'
 import Navbar from '../../components/Navbar'
