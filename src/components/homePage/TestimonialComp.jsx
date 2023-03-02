@@ -7,7 +7,7 @@ const TestimonialComp = ({ item }) => {
     <>
         <div className='DESKTOP hidden lg:flex items-start justify-between gap-4 w-full'>
             <div className='flex flex-col items-start text-[#fff] pt-4 pb-6 px-4 w-[505px]'>
-                <div className='flex items-center justify-start gap-2 w-full bg-[#000066A8] p-6'>
+                <div className='flex items-center justify-start gap-2 w-full bg-[#14744CA8] p-6'>
                     <img src={item.img} alt="" className='w-[64px] h-[64px] object-cover rounded-full' />
                     <span className='text-[24px] font-extrabold leading-[29.26px]'> {item.name} </span>
                 </div>
@@ -36,7 +36,7 @@ const TestimonialComp = ({ item }) => {
             </div>
 
             <div className='flex flex-col items-start text-[#fff] pt-4 pb-6 px-4 w-[505px]'>
-                <div className='flex items-center justify-start gap-2 w-full bg-[#000066A8] p-6'>
+                <div className='flex items-center justify-start gap-2 w-full bg-[#14744CA8] p-6'>
                     <img src={item.img1} alt="" className='w-[64px] h-[64px] object-cover rounded-full' />
                     <span className='text-[24px] font-extrabold leading-[29.26px]'> {item.name1} </span>
                 </div>
@@ -65,7 +65,7 @@ const TestimonialComp = ({ item }) => {
 
         <div className='flex items-start justify-between gap-4 w-full lg:hidden'>
             <div className='flex flex-col items-start text-[#fff] pt-4 pb-6 px-4 w-[100%]'>
-                <div className='flex items-center justify-start gap-2 w-full bg-[#000066A8] p-6'>
+                <div className='flex items-center justify-start gap-2 w-full bg-[#14744CA8] p-6'>
                     <img src={item.img} alt="" className='w-[34.42px] h-[34.42px] object-cover rounded-full' />
                     <span className='text-[12.91px] font-extrabold leading-[15.73px]'> {item.name} </span>
                 </div>

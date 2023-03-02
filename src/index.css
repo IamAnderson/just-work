@@ -4,7 +4,7 @@
 
 
 .navbar_signup__gradient{
-    background: linear-gradient(180deg, #1720E9 0%, #0D58F1 43.23%, #0D58F1 43.24%, #AC00FD 100%);
+    background: linear-gradient(180deg, #006D44 0%, #B1FD55 100%);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -12,11 +12,11 @@
     width: 14px;
     height: 14px;
     border-radius: 9999px;
-    background: linear-gradient(180deg, #00A2FD 0%, #AC00FD 89.5%);
+    background: linear-gradient(180deg, #146374 0%, #B1FD55 89.5%);
 }
 
 .explore_component__gradient1{
-    background: linear-gradient(180deg, #00A2FD 0%, #AC00FD 89.5%);
+    background: linear-gradient(180deg, #146374 0%, #B1FD55 89.5%);
 }
 
 .explore_content_arrow_box__shadow{
@@ -34,7 +34,9 @@
 }
 
 .header_bg__img{
-    background: url("./assets/headerImg.png");
+    /* background: linear-gradient(172.19deg, #000000 0.11%, rgba(20, 116, 76, 0.78) 93.97%); */
+    background: linear-gradient(173.31deg, rgba(20, 116, 76, 0.78) -50.41%, rgba(177, 253, 85, 0) 94.75%);
+
 }
 
 .spiral1_bg__img{
@@ -57,7 +59,7 @@
 }
 
 .rm__gradient{
-    background: linear-gradient(180deg, #1720E9 0%, #0D58F1 43.23%, #0D58F1 43.24%, #AC00FD 100%);
+    background: linear-gradient(180deg, #1720E9 0%, #146374 0.01%, #146374 28.13%, #1DDC75 72.4%, #B1FD55 100%);
     box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.25);
 }
 
@@ -66,7 +68,7 @@
 }
 
 .testimonial_comp__gradient{
-    background: linear-gradient(180deg, #020272 0%, #4F146A 100%);
+    background: linear-gradient(180deg, #146374 0%, #94C15D 100%);
 }
 
 .sLide{
@@ -79,7 +81,7 @@
 }
 
 .news_comp__gradient{
-    background: linear-gradient(180deg, #1720E9 0%, #0D58F1 43.23%, #0D58F1 43.24%, #AC00FD 100%);
+    background: linear-gradient(180deg, #146374 0%, #B1FD55 100%);
 }
 
 .news_comp__box_shadow{
@@ -87,7 +89,7 @@
 }
 
 .news_btn__gradient{
-    background: linear-gradient(180deg, #1720E9 0%, #0D58F1 43.23%, #0D58F1 43.24%, #AC00FD 100%);
+    background: linear-gradient(180deg, #146374 0%, #B1FD55 100%);
 }
 
 .stats_bg__frame{
@@ -104,8 +106,35 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
 }
 
+.project_bg__gradient{
+    /* background: linear-gradient(173.31deg, rgba(177, 253, 85, 0) -50.41%, rgba(20, 116, 76, 0.78) 94.75%); */
+    background: url("./assets/bgFrame2.png");
+}
 
-/* faq section */
+
+/* faqs section */
 .accordion_box__shadow{
     box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.06);
+}
+
+.faqs_box__shadow{
+    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
+}
+
+
+/* about section */
+.about_team__gradient{
+    background: linear-gradient(188.59deg, #D9D9D9 -57.72%, #FFFFFF 75.2%);
+    width: calc(100% - 28rem);
+}
+
+.about_team_btn__gradient{
+    background: linear-gradient(180deg, #B1FD55 0%, #14744C 43.23%, #006D44 54.69%, #14744C 100%);
+    box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (max-width: 1024px) {
+    .about_team__gradient{
+        width: calc(100% - 2rem);
+    }
 }

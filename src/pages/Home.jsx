@@ -14,7 +14,7 @@ import Title1 from '../components/labels/Title1'
 import CheckMText from '../components/labels/CheckMText'
 import ExploreComponent from '../components/homePage/ExploreComponent'
 
-import { exploreComponentData, partnersComponentData, TestimonialData } from '../data/data'
+import { exploreComponentData, partnersComponentData, TestimonialData, toolsComponentData } from '../data/data'
 import { MdOutlineArrowRightAlt } from 'react-icons/md'
 import { HiOutlineArrowNarrowLeft } from "react-icons/hi"
 
@@ -28,6 +28,8 @@ import Footer from '../components/Footer'
 import styled from 'styled-components'
 import AboutComponent from '../components/homePage/AboutComponent'
 import StatsComponent from '../components/homePage/StatsComponent'
+import ToolsComponent from '../components/homePage/ToolsComponent'
+import ApproachComponent from '../components/homePage/ApproachComponent'
 
 const Main = styled.div`
   overflow-x: scroll;
@@ -67,21 +69,17 @@ const Home = () => {
     <>
         <Navbar />
         
-        <div className='flex flex-col gap-[25rem] w-full'>
-          <div className='relative flex flex-col pb-52 bg-[#fff] w-full'>
-              <div className='header_bg__img flex items-start justify-center h-[400px] lg:h-[800px] w-full'>
-                <div className='flex flex-col items-center justify-start gap-8 w-full pt-32'>
-                  <div className='flex flex-col items-center gap-1 w-full'>
-                    <span className='text-[15.51px] lg:text-[36px] text-[#fff] font-medium font-[Montserrat Alternates] leading-[18.91px] lg:leading-[43.88px]'> Access a wide range of datasets to </span>
-                    <span className='text-[15.51px] lg:text-[36px] text-[#fff] font-medium leading-[18.91px] lg:leading-[43.88px]'> solve real-world problems and accelerate your </span>
-                    <span className='flex items-center gap-2 text-[15.51px] lg:text-[36px] text-[#fff] font-medium leading-[18.91px] lg:leading-[43.88px]'> work in <span className='text-[#FBC609] font-bold'> DATA SCIENCE </span> </span>
+        <div className='flex flex-col gap-24 w-full'>
+          <div className='relative flex flex-col bg-[#fff] w-full'>
+              <div className='header_bg__img flex items-center justify-center h-[400px] lg:h-[600px] w-full px-16'>
+                <div className='lg:flex-[0.5] flex flex-col items-start justify-start gap-8 w-full'>
+                  <div className='flex flex-col items-start gap-1 w-full'>
+                    <span className='text-[15.51px] lg:text-[32px] text-[#fff] font-medium font-[Montserrat Alternates] leading-[18.91px] lg:leading-[50px] capitalize'> Thrive in the Era of Tech by Working </span>
+                    <span className='text-[15.51px] lg:text-[32px] text-[#fff] font-medium leading-[18.91px] lg:leading-[50px] capitalize'> on Real-World Problems Using a </span>
+                    <span className='text-[15.51px] lg:text-[32px] text-[#fff] font-medium leading-[18.91px] lg:leading-[50px] capitalize'> Variety of Tools to Build your </span>
+                    <span className='flex items-center gap-2 text-[15.51px] lg:text-[32px] text-[#fff] font-medium leading-[18.91px] lg:leading-[50px] capitalize'> Portfolio In <span className='text-[#B1FD55] font-bold'> DATA SCIENCE </span> </span>
                   </div>
-
-                  <div className='text-[#fff] text-[10px] lg:text-[18px] leading-[12.91px] lg:leading-[21.94px] font-bold'>
-                    Get the skills you need to get ahead with our most end-to-end projects.
-                  </div>
-
-                  <div className='flex flex-col lg:flex-row items-center justify-center gap-4'>
+                  <div className='flex flex-col lg:flex-row items-start justify-center gap-4'>
                     <GetStartedBtn />
 
                     <div className='flex items-center gap-2 text-[#fff]'>
@@ -91,9 +89,17 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <>
+                <div className='lg:flex-[0.5] w-full'>
+                  <img src="" alt="" className='w-full h-full object-contain' />
+                  hh
+                </div>
+
+              </div>
+              
+
+              {/* former spiral bg section */}
+              {/* <>
                 <div className='DESKTOP hidden lg:block spiral1_bg__img absolute bottom-[200px] right-0 left-0 h-[355px] w-full'> 
                   <div className='relative flex items-start h-full mt-20 px-8 lg:px-56 w-full'>
                     <div className='flex flex-col lg:flex-row lg:items-start justify-start lg:justify-between w-full z-10'>
@@ -204,19 +210,19 @@ const Home = () => {
                     </div>  
                   </div>
                 </div>
-              </>
+              </> */}
 
               {/* about amdari */}
-              <div className='DESKTOP spiral2_bg__img hidden absolute bottom-[-870px] lg:bottom-[-370px] right-0 left-0 h-[551.18px] w-full lg:pb-28 lg:block'>
-                <>
+              <div className='DESKTOP spiral2_bg__img hidden lg:block bottom-[-870px] lg:bottom-[-370px] right-0 left-0 h-[551.18px] w-full mt-24'>
+                <div className='pt-8'>
                   <AboutComponent />
-                </>
+                </div>
               </div>
 
-              <div className='MOBILE block absolute bottom-[-1200px] sm:bottom-[-750px] right-0 left-0 w-full lg:pb-28 lg:hidden'>
+              <div className='MOBILE block absolute bottom-[-1200px] sm:bottom-[-750px] right-0 left-0 w-full lg:pb-28 lg:hidden mt-20'>
                 <AboutComponent />
               </div>
-            </div>
+          </div>
 
 
           <div className='flex flex-col justify-start w-full'>
@@ -275,7 +281,7 @@ const Home = () => {
                           <CheckMText variant text={"We build your confidence to build real world projects by learning from real industry experts."} />
                         </div>    
                         <NavLink to="/signup" reloadDocument>
-                          <div className='flex items-center justify-center w-[101.72px] h-[19.79px] text-[7.7px] text-[#fff] bg-[#FFCE31]  font-medium lg:hidden'>
+                          <div className='rm__gradient flex items-center justify-center w-[101.72px] lg:w-[183px] h-[19.79px] lg:h-[36px] text-[7.7px] lg:text-[14px] text-[#fff] font-medium'>
                             Get started for free
                           </div>                  
                         </NavLink>
@@ -289,18 +295,8 @@ const Home = () => {
               </div>
 
               {/* Our approach section */}
-              <div className='flex flex-col items-center gap-8 pt-24 mb-24 lg:mb-52 pl-8 lg:pl-56'>
-                <div className='flex justify-center items-center w-full lg:block pr-8 lg:pr-56'>
-                  <Title text={"Our Approach"} />
-                </div>
-
-                <div className='pr-8 lg:pr-56'>
-                  <Heading text1={"Learning by doing is our proven learning"} text2={"methodology."} />
-                </div>
-
-                <div className='flex items-center w-full'>
-                    <MethodologyApproachComponent />
-                </div>
+              <div className='pt-24 mb-24 lg:mb-52'>
+                <ApproachComponent />
               </div>
 
               {/* {stats} */}
@@ -309,7 +305,7 @@ const Home = () => {
               </>
 
               {/* our partners section */}
-              <div className='flex flex-col items-center gap-8 w-full px-8 lg:px-0 mb-36'>
+              {/* <div className='flex flex-col items-center gap-8 w-full px-8 lg:px-0 mb-36'>
                 <div className='flex justify-center items-center w-full lg:block lg:px-56'>
                    <Title text={'Our Partners'} />
                 </div>
@@ -329,7 +325,22 @@ const Home = () => {
                     <PartnersComponent item={item} key={index} />
                   ))}
                 </div>
+              </div> */}
+
+
+              {/* tools covered section */}
+              <div className='flex flex-col items-center gap-8 w-full px-8 lg:px-0 mb-36'>
+                <div className='flex justify-center items-center w-full lg:px-56'>
+                   <Title text={'Tools Covered'} />
+                </div>
+
+                <div className='flex items-center justify-between flex-wrap gap-2 lg:gap-4 w-full px-8 lg:px-56'>
+                  {toolsComponentData.map((item, index) => (
+                    <ToolsComponent item={item} key={index} />
+                  ))}
+                </div>
               </div>
+
 
               {/* testimonials section */}
               <div className='bg_frame__1 w-full mb-28'>
@@ -368,9 +379,9 @@ const Home = () => {
                       </div>
 
                       <div className='flex justify-center items-center gap-2 lg:gap-4'>
-                          <span className={`h-[7px] lg:h-[14px] w-[7px] lg:w-[14px] rounded-full ${current === 0 ? "dot_title__component lg:h-[10px] w-[10px]" : "bg-[#fff]"}`} />
-                          <span className={`h-[7px] lg:h-[14px] w-[7px] lg:w-[14px] rounded-full ${current === 1 ? "dot_title__component lg:h-[10px] w-[10px]" : "bg-[#fff]"}`} />
-                          <span className={`h-[7px] lg:h-[14px] w-[7px] lg:w-[14px] rounded-full ${current === 2 ? "dot_title__component lg:h-[10px] w-[10px]" : "bg-[#fff]"}`} />
+                          <span className={`h-[7px] lg:h-[14px] w-[7px] lg:w-[14px] rounded-full ${current === 0 ? "dot_title__component lg:h-[10px] w-[10px]" : "bg-[#fff]"}`} onClick={() => setCurrent(0)}/>
+                          <span className={`h-[7px] lg:h-[14px] w-[7px] lg:w-[14px] rounded-full ${current === 1 ? "dot_title__component lg:h-[10px] w-[10px]" : "bg-[#fff]"}`} onClick={() => setCurrent(1)} />
+                          <span className={`h-[7px] lg:h-[14px] w-[7px] lg:w-[14px] rounded-full ${current === 2 ? "dot_title__component lg:h-[10px] w-[10px]" : "bg-[#fff]"}`} onClick={() => setCurrent(2)}/>
                       </div>
                     </div>
                 </div>

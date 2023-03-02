@@ -7,6 +7,7 @@ import img from "../assets/img6.png"
 import { Accordion, AccordionItem, AccordionItemHeading, AccordionItemButton, AccordionItemPanel } from 'react-accessible-accordion'
 import 'react-accessible-accordion/dist/fancy-example.css'
 import { BsArrowDownShort } from 'react-icons/bs'
+import HeaderComponent1 from '../components/HeaderComponent1'
 
 
 const Faqs = () => {
@@ -20,27 +21,14 @@ const Faqs = () => {
         <Navbar />
 
         <div className='flex flex-col gap-24 w-full pb-24'>
-            <div className='relative flex flex-col bg-[#fff] w-full'>
-              <div className='header_bg__img flex items-center justify-center h-[400px] lg:h-[600px] w-full'>
-                <div className='flex flex-col items-center justify-start gap-8 w-full'>
-                  <div className='flex flex-col items-center gap-1 w-full'>
-                    <div>
-                        <HeaderTitle text={"FAQS"} />
-                    </div>
-                    <div>
-                        <LinkHeaderText text={"FAQS"} />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <HeaderComponent1 text={"FAQS"} text1={"Advance to the Next Level in your Career by Attempting Projects Based on Your Skill Level"} />
 
-            <div className='flex items-start gap-8 w-full px-4 lg:px-56'>
-                <div className='flex-[0.5] flex items-start w-full'>
-                    <Accordion allowZeroExpanded={true}>
-                        <AccordionItem>
-                            <AccordionItemHeading>
-                                <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#02106A] border-[#C4C4C4] py-4 px-2'>
+            <div className='flex flex-col lg:flex-row items-center lg:items-start gap-8 w-full px-4 lg:pl-56 lg:pr-32'>
+                <div className='flex-[0.6] flex items-start w-full'>
+                    <Accordion allowZeroExpanded={true} className='w-full'>
+                        <AccordionItem className='w-full'>
+                            <AccordionItemHeading className='w-full'>
+                                <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#14744C] border-[#C4C4C4] py-4 px-2'>
                                     <p className='text-[#fff] text-[12px] font-medium font-[Inter] leading-[14.52px]'> Do I need to download any software to assess and download projects on Amdari? </p>
                                     <p> <BsArrowDownShort color='#fff' size={"20"} /> </p>
                                 </AccordionItemButton>
@@ -52,7 +40,7 @@ const Faqs = () => {
 
                         <AccordionItem>
                             <AccordionItemHeading>
-                                <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#02106A] border-[#C4C4C4] py-4 px-2'>
+                                <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#14744C] border-[#C4C4C4] py-4 px-2'>
                                     <p className='text-[#fff] text-[12px] font-medium font-[Inter] leading-[14.52px]'> Can I share my completed projects? </p>
                                     <p> <BsArrowDownShort color='#fff' size={"20"} /> </p>
                                 </AccordionItemButton>
@@ -64,7 +52,7 @@ const Faqs = () => {
 
                         <AccordionItem>
                             <AccordionItemHeading>
-                                <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#02106A] border-[#C4C4C4] py-4 px-2'>
+                                <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#14744C] border-[#C4C4C4] py-4 px-2'>
                                     <p className='text-[#fff] text-[12px] font-medium font-[Inter] leading-[14.52px]'> How does the Amdari subscription work? </p>
                                     <p> <BsArrowDownShort color='#fff' size={"20"} /> </p>
                                 </AccordionItemButton>
@@ -76,7 +64,7 @@ const Faqs = () => {
 
                         <AccordionItem>
                             <AccordionItemHeading>
-                                <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#02106A] border-[#C4C4C4] py-4 px-2'>
+                                <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#14744C] border-[#C4C4C4] py-4 px-2'>
                                     <p className='text-[#fff] text-[12px] font-medium font-[Inter] leading-[14.52px]'> What is inside each project ? </p>
                                     <p> <BsArrowDownShort color='#fff' size={"20"} /> </p>
                                 </AccordionItemButton>
@@ -88,7 +76,7 @@ const Faqs = () => {
 
                         <AccordionItem>
                             <AccordionItemHeading>
-                                <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#02106A] border-[#C4C4C4] py-4 px-2'>
+                                <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#14744C] border-[#C4C4C4] py-4 px-2'>
                                     <p className='text-[#fff] text-[12px] font-medium font-[Inter] leading-[14.52px]'> Is the subscription fee only for a specific project? </p>
                                     <p> <BsArrowDownShort color='#fff' size={"20"} /> </p>
                                 </AccordionItemButton>
@@ -100,7 +88,7 @@ const Faqs = () => {
 
                         <AccordionItem>
                             <AccordionItemHeading>
-                                <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#02106A] border-[#C4C4C4] py-4 px-2'>
+                                <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#14744C] border-[#C4C4C4] py-4 px-2'>
                                     <p className='text-[#fff] text-[12px] font-medium font-[Inter] leading-[14.52px]'> Can I get some more information about your company and team ? </p>
                                     <p> <BsArrowDownShort color='#fff' size={"20"} /> </p>
                                 </AccordionItemButton>
@@ -112,7 +100,7 @@ const Faqs = () => {
 
                         <AccordionItem>
                             <AccordionItemHeading>
-                                <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#02106A] border-[#C4C4C4] py-4 px-2'>
+                                <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#14744C] border-[#C4C4C4] py-4 px-2'>
                                     <p className='text-[#fff] text-[12px] font-medium font-[Inter] leading-[14.52px]'> What do you mean by end-to-end projects ? </p>
                                     <p> <BsArrowDownShort color='#fff' size={"20"} /> </p>
                                 </AccordionItemButton>
@@ -124,7 +112,7 @@ const Faqs = () => {
 
                         <AccordionItem>
                             <AccordionItemHeading>
-                                <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#02106A] border-[#C4C4C4] py-4 px-2'>
+                                <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#14744C] border-[#C4C4C4] py-4 px-2'>
                                     <p className='text-[#fff] text-[12px] font-medium font-[Inter] leading-[14.52px]'> Who is implementing these projects ? </p>
                                     <p> <BsArrowDownShort color='#fff' size={"20"} /> </p>
                                 </AccordionItemButton>
@@ -136,7 +124,7 @@ const Faqs = () => {
 
                         <AccordionItem>
                             <AccordionItemHeading>
-                                <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#02106A] border-[#C4C4C4] py-4 px-2'>
+                                <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#14744C] border-[#C4C4C4] py-4 px-2'>
                                     <p className='text-[#fff] text-[12px] font-medium font-[Inter] leading-[14.52px]'> Once I enroll, do I get access to all new projects that you add ? </p>
                                     <p> <BsArrowDownShort color='#fff' size={"20"} /> </p>
                                 </AccordionItemButton>
@@ -148,7 +136,7 @@ const Faqs = () => {
 
                         <AccordionItem>
                             <AccordionItemHeading>
-                                <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#02106A] border-[#C4C4C4] py-4 px-2'>
+                                <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#14744C] border-[#C4C4C4] py-4 px-2'>
                                     <p className='text-[#fff] text-[12px] font-medium font-[Inter] leading-[14.52px]'> How does this help in my job interviews and current projects ? </p>
                                     <p> <BsArrowDownShort color='#fff' size={"20"} /> </p>
                                 </AccordionItemButton>
@@ -160,7 +148,7 @@ const Faqs = () => {
 
                         <AccordionItem>
                             <AccordionItemHeading>
-                                <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#02106A] border-[#C4C4C4] py-4 px-2'>
+                                <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#14744C] border-[#C4C4C4] py-4 px-2'>
                                     <p className='text-[#fff] text-[12px] font-medium font-[Inter] leading-[14.52px]'> What are the prerequisites ? </p>
                                     <p> <BsArrowDownShort color='#fff' size={"20"} /> </p>
                                 </AccordionItemButton>
@@ -172,7 +160,7 @@ const Faqs = () => {
 
                         <AccordionItem>
                             <AccordionItemHeading>
-                                <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#02106A] border-[#C4C4C4] py-4 px-2'>
+                                <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#14744C] border-[#C4C4C4] py-4 px-2'>
                                     <p className='text-[#fff] text-[12px] font-medium font-[Inter] leading-[14.52px]'> Do you provide technical support? </p>
                                     <p> <BsArrowDownShort color='#fff' size={"20"} /> </p>
                                 </AccordionItemButton>
@@ -184,7 +172,7 @@ const Faqs = () => {
 
                         <AccordionItem>
                             <AccordionItemHeading>
-                                <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#02106A] border-[#C4C4C4] py-4 px-2'>
+                                <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#14744C] border-[#C4C4C4] py-4 px-2'>
                                     <p className='text-[#fff] text-[12px] font-medium font-[Inter] leading-[14.52px]'> How are these projects better than doing a course? </p>
                                     <p> <BsArrowDownShort color='#fff' size={"20"} /> </p>
                                 </AccordionItemButton>
@@ -196,7 +184,7 @@ const Faqs = () => {
 
                         <AccordionItem>
                             <AccordionItemHeading>
-                                <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#02106A] border-[#C4C4C4] py-4 px-2'>
+                                <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#14744C] border-[#C4C4C4] py-4 px-2'>
                                     <p className='text-[#fff] text-[12px] font-medium font-[Inter] leading-[14.52px]'> Can I cancel my plan? </p>
                                     <p> <BsArrowDownShort color='#fff' size={"20"} /> </p>
                                 </AccordionItemButton>
@@ -228,16 +216,10 @@ const Faqs = () => {
                     </Accordion> */}
                 </div>
 
-                <div className='flex-[0.5]'>
-                    <img src={img} alt="" className='w-full h-full object-cover' />
-                </div>
-            </div>
+                <div className='faqs_box__shadow flex-[0.4] flex flex-col gap-12 justify-start items-center rounded-[6.37px] p-8 pb-6 w-full'>
+                    <span className='text-[#102137] text-[21px] font-bold leading-[33.07px]'> Do You Have Any Questions </span>
 
-            <div className='flex items-start gap-8 w-full px-4 lg:px-56'>
-                <div className='flex-[0.5] flex flex-col gap-12 justify-start w-full'>
-                    <span className='text-[#102137] text-[27.13px] font-bold leading-[33.07px]'> Do You Have Any Questions </span>
-
-                    <form className='flex flex-col gap-8 items-start w-full' onSubmit={onSubmit}>
+                    <form className='flex flex-col gap-6 items-start w-full' onSubmit={onSubmit}>
                         <div className='flex items-center justify-between gap-4 w-full'>
                             <input type="text" placeholder='Name'
                             className='flex items-center text-[#ABABAB] text-[12px] leading-[14.63px] border border-[#E5E5E5] rounded-[10px] w-full h-[46px] px-4 focus:outline-none' />
@@ -260,14 +242,12 @@ const Faqs = () => {
                         </div>
 
                         <button className='flex items-center justify-center w-full'>
-                            <div className='text-[#fff] text-[13.82px] font-[Inter] font-medium bg-[#02106A] rounded-[10px] py-2 px-12'>
+                            <div className='text-[#fff] text-[13.82px] font-[Inter] font-medium bg-[#14744C] rounded-[10px] py-2 px-12'>
                                 Send Message
                             </div>
                         </button>
                     </form>
                 </div>
-                
-                <div className='flex-[0.5]' />
             </div>
         </div>
 

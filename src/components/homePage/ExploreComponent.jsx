@@ -22,7 +22,7 @@ const ExploreComponent = ({ item }) => {
                     <MdOutlineArrowRightAlt color="#fff" size="20" className='absolute left-[-3px]' />
                 </div>
 
-                <span className='text-[7.63px] lg:text-[12px] text-[#179DE9] font-semibold'>
+                <span className='text-[7.63px] lg:text-[12px] text-[#146374] font-semibold'>
                     View Project Details    
                 </span>
             </div>

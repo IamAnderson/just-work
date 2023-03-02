@@ -6,6 +6,7 @@ import Faqs from './pages/Faqs'
 import SignUp from './pages/SignUp'  
 import ProjectDetails from './pages/projects/ProjectDetails'
 import ProjectPaths from './pages/projects/ProjectPaths'
+import About from './pages/About'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
               <Route path='/project-paths' element={<ProjectPaths />} />
 
               <Route path='/faqs' element={<Faqs />} />
+              <Route path='/about' element={<About />} />
 
               <Route path='/signup' element={<SignUp />} />
           </Routes>

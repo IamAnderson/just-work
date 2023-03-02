@@ -7,11 +7,11 @@ import logo1 from "../assets/logo2.png";
 
 const Footer = () => {
   return (
-    <div className='bg-[#000066] text-[#fff] w-full py-12 lg:pt-16 lg:pb-8 '>
+    <div className='bg-[#14744C] text-[#fff] w-full py-12 lg:pt-16 lg:pb-8 '>
         <div className='flex flex-col lg:flex-row items-center lg:items-start justify-start lg:justify-between gap-8 lg:gap-0 w-full px-8 lg:px-24'>
             <div className='flex flex-col items-start gap-6 w-[313px]'>
-                <span className='hidden lg:block h-[23.51px] pr-8'>
-                    <img src={logo} alt="" className='h-full w-full object-cover' />
+                <span className='hidden lg:block h-[20px] pr-8'>
+                    <img src={logo1} alt="" className='h-full w-full object-contain' />
                 </span>
 
                 <span className='block h-[12px] pr-8 lg:hidden'>
@@ -23,19 +23,19 @@ const Footer = () => {
             
                 <div className='hidden lg:flex items-center gap-4 w-full'>
                     <Link to="">
-                        <span className='flex items-center justify-center w-[24px] h-[24px] bg-[#fff] rounded-[4px]'> <FaTwitter color="#000066" size={"14"} /> </span>
+                        <span className='flex items-center justify-center w-[24px] h-[24px] bg-[#fff] rounded-[4px]'> <FaTwitter color="#14744C" size={"14"} /> </span>
                     </Link>
 
                     <Link to="">
-                        <span className='flex items-center justify-center w-[24px] h-[24px] bg-[#fff] rounded-[4px]'> <FaFacebookF color="#000066" size={"14"} /> </span>
+                        <span className='flex items-center justify-center w-[24px] h-[24px] bg-[#fff] rounded-[4px]'> <FaFacebookF color="#14744C" size={"14"} /> </span>
                     </Link>
 
                     <Link to="">
-                        <span className='flex items-center justify-center w-[24px] h-[24px] bg-[#fff] rounded-[4px]'> <BsInstagram color="#000066" size={"14"} /> </span>
+                        <span className='flex items-center justify-center w-[24px] h-[24px] bg-[#fff] rounded-[4px]'> <BsInstagram color="#14744C" size={"14"} /> </span>
                     </Link>
 
                     <Link to="">
-                        <span className='flex items-center justify-center w-[24px] h-[24px] bg-[#fff] rounded-[4px]'> <FaLinkedinIn color="#000066" size={"14"} /> </span>
+                        <span className='flex items-center justify-center w-[24px] h-[24px] bg-[#fff] rounded-[4px]'> <FaLinkedinIn color="#14744C" size={"14"} /> </span>
                     </Link>
                 </div>
             </div>
@@ -133,7 +133,7 @@ const Footer = () => {
             </div>
         </div>
 
-        <div className='h-[1px] bg-[#00A2FD] w-full mt-16 mb-8' />
+        <div className='h-[1px] bg-[#B1FD55] w-full mt-16 mb-8' />
 
         <>
             <div className='hidden lg:block px-56'>

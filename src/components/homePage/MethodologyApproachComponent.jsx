@@ -84,7 +84,6 @@ const MethodologyApproachComponent = () => {
             <>
                 <div className='relative hidden lg:flex justify-center items-center gap-2 w-full'>
                     <img src={img7} alt="" className='w-[24.23px] lg:w-[50px] h-[24.23px] lg:h-[50px] object-cover' />
-                    <img src={line} alt="" className="absolute left-[155px] w-[190px] h-[5px] object-cover"/>
                 </div>
                 <div className='relative flex flex-col items-center w-full lg:hidden'>
                     <img src={img4} alt="" className='w-[24.23px] lg:w-[50px] h-[24.23px] lg:h-[50px] object-cover' />

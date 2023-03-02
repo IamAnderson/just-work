@@ -18,6 +18,12 @@ import img10 from "../assets/windows.png";
 import img11 from "../assets/img3.png";
 import img12 from "../assets/img4.png";
 
+import toolImg1 from "../assets/tool1.png"
+import toolImg2 from "../assets/tool2.png"
+import toolImg3 from "../assets/tool3.png"
+import toolImg4 from "../assets/tool4.png"
+import toolImg5 from "../assets/tool5.png"
+
 import img13 from "../assets/person1.png";
 import img14 from "../assets/person1.png";
 
@@ -158,6 +164,29 @@ export const partnersComponentData = [
     {
         id: 5,
         img: img12,
+    },
+]
+
+export const toolsComponentData = [
+    {
+        id: 1,
+        img: toolImg1,
+    },
+    {
+        id: 2,
+        img: toolImg2,
+    },
+    {
+        id: 3,
+        img: toolImg3,
+    },
+    {
+        id: 4,
+        img: toolImg4,
+    },
+    {
+        id: 5,
+        img: toolImg5,
     },
 ]
 

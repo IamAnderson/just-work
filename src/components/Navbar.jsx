@@ -10,8 +10,8 @@ import ProjBar from './navbarComponents/ProjBar';
 
 
 let activeNav = {
-    backgroundColor: "#00A2FD33",
-    borderBottom: "2px solid #179DE9",
+    backgroundColor: "#B1FD5533",
+    borderBottom: "2px solid #B1FD55",
     height: "100%",
 };
 
@@ -21,7 +21,7 @@ const Navbar = () => {
     const [showProjBar, setShowProjBar] = useState(false);
 
   return (
-    <div className='fixed top-0 flex items-center justify-between lg:justify-start w-full bg-[#000066] border-b border-[#fff] h-[64px] px-8 lg:px-16 z-30'>
+    <div className='fixed top-0 flex items-center justify-between lg:justify-start w-full bg-[#006D44] border-b border-[#fff] h-[64px] px-8 lg:px-16 z-30'>
         <div className="lg:flex-[0.15] flex items-center justify-center lg:border-r border-[#fff] h-full">
             <span className='h-[12px] lg:h-[14px] lg:pr-8'>
                 <img src={logo} alt="" className='h-full w-full object-cover' />

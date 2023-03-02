@@ -6,6 +6,7 @@ import SignupImg from '../components/signupPageComp/SignupImg'
 import img1 from "../assets/img7.png"
 import img2 from "../assets/img8.png"
 import img3 from "../assets/img9.png"
+import img4 from "../assets/img10.png"
 
 const SignUp = () => {
 
@@ -82,7 +83,7 @@ const SignUp = () => {
                                         className='bg-[#F0F0F0] focus:outline-none h-[63.58px] w-full rounded-[5.72px] px-4' />
                                     </div>
 
-                                    <div className='flex items-center justify-center text-[17.15px] text-[#fff] bg-[#02106A] cursor-pointer rounded-[5.72px] h-[64px] w-full mt-8' 
+                                    <div className='flex items-center justify-center text-[17.15px] text-[#fff] bg-[#124832] cursor-pointer rounded-[5.72px] h-[64px] w-full mt-8' 
                                         onClick={() => {
                                             if(!firstName || !lastName || !email || !phoneNumber){
                                                 return alert("Fill in the required form")
@@ -128,7 +129,7 @@ const SignUp = () => {
                                         className='bg-[#F0F0F0] focus:outline-none h-[63.58px] w-full rounded-[5.72px] px-4' />
                                     </div>
 
-                                    <div className='flex items-center justify-center text-[17.15px] text-[#fff] bg-[#02106A] cursor-pointer rounded-[5.72px] h-[64px] w-full mt-8' 
+                                    <div className='flex items-center justify-center text-[17.15px] text-[#fff] bg-[#124832] cursor-pointer rounded-[5.72px] h-[64px] w-full mt-8' 
                                         onClick={() => {
                                             if(!iwantto || !jobTitle || !companyName ){
                                                 return alert("Fill in the required form")
@@ -186,7 +187,7 @@ const SignUp = () => {
                                         </div>
                                     </div>
 
-                                    <div className='flex items-center justify-center text-[17.15px] text-[#fff] bg-[#02106A] cursor-pointer rounded-[5.72px] h-[64px] w-full mt-8' 
+                                    <div className='flex items-center justify-center text-[17.15px] text-[#fff] bg-[#124832] cursor-pointer rounded-[5.72px] h-[64px] w-full mt-8' 
                                         onClick={() => {
                                             if(!projectInterest || !skillLevel || !location || !gender ){
                                                 return alert("Fill in the required form")
@@ -212,7 +213,7 @@ const SignUp = () => {
                                         className='bg-[#F0F0F0] focus:outline-none h-[63.58px] w-full rounded-[5.72px] px-4' />
                                     </div>
 
-                                    <button className='flex items-center justify-center text-[17.15px] text-[#fff] bg-[#02106A] cursor-pointer rounded-[5.72px] h-[64px] w-full mt-8'>
+                                    <button className='flex items-center justify-center text-[17.15px] text-[#fff] bg-[#124832] cursor-pointer rounded-[5.72px] h-[64px] w-full mt-8'>
                                         Submit
                                     </button>
                                 </>
@@ -242,7 +243,7 @@ const SignUp = () => {
 
                     {tabIndex === 4 && (
                         <>
-                            <SignupImg img={img2} />
+                            <SignupImg img={img4} />
                         </>
                     )}
                 </div>

@@ -21,9 +21,9 @@ const Main = styled.div`
 const NewsComponent = () => {
   return (
     <>
-        <div className='DESKTOP hidden lg:flex items-start justify-between gap-4 w-full'>
+        <div className='DESKTOP hidden lg:flex items-start justify-between gap-2 w-full'>
             <NavLink to={``}>
-                <div className='flex items-start w-full'>
+                <div className='flex items-start w-full h-full'>
                     <div className='flex-[0.30] flex items-start w-full'>
                         <img src={img} alt="" className='w-full h-[325.16px] object-cover' />
                     </div>
@@ -51,9 +51,9 @@ const NewsComponent = () => {
 
                         <div className='h-[2px] w-full bg-[#A5A5A5]' />
 
-                        <div className='flex items-center justify-between gap-4 w-full px-4'>
-                            <span className='flex items-center gap-2 w-full text-[12px] text-[#a5a5a5] leading-[24px]'> <BiCalendar color='#A5A5A5' size={"20"} /> {"February 10, 2023"} </span>
-                            <span className='flex items-center gap-2 w-full text-[12px] text-[#a5a5a5] leading-[24px]'> <AiOutlineComment color='#A5A5A5' size={"20"} /> {"3"} Comments </span>
+                        <div className='flex items-center justify-between gap-2 w-full px-4'>
+                            <span className='flex items-center gap-2 w-full text-[12px] text-[#a5a5a5] leading-[12px]'> <BiCalendar color='#A5A5A5' size={"20"} /> {"February 10, 2023"} </span>
+                            <span className='flex items-center gap-2 w-full text-[12px] text-[#a5a5a5] leading-[12px]'> <AiOutlineComment color='#A5A5A5' size={"20"} /> {"3"} Comments </span>
                         </div>
                     </div>
                 </div>
@@ -65,10 +65,10 @@ const NewsComponent = () => {
                         <img src={img} alt="" className='w-full h-[325.16px] object-cover' />
                     </div>
 
-                    <div className='flex-[0.60] flex flex-col gap-4 pt-8 pb-4'>
+                    <div className='flex-[0.60] flex flex-col gap-4 pt-8'>
                         <div className='flex flex-col gap-4 px-4 w-full'>
                             <div>
-                                <Title2 text={"Optimaztion"} light />
+                                <Title2 text={"Optimaztion"} light={false} />
                             </div>
                             <div className=''>
                                 <Heading text1={"Black Woman Rejoices"} posiStart txtSm txtSmValue={18} />
@@ -88,15 +88,16 @@ const NewsComponent = () => {
 
                         <div className='h-[2px] w-full bg-[#A5A5A5]' />
 
-                        <div className='flex items-center justify-between gap-4 w-full px-4'>
-                            <span className='flex items-center gap-2 w-full text-[12px] text-[#a5a5a5] leading-[24px]'> <BiCalendar color='#A5A5A5' size={"20"} /> {"February 10, 2023"} </span>
-                            <span className='flex items-center gap-2 w-full text-[12px] text-[#a5a5a5] leading-[24px]'> <AiOutlineComment color='#A5A5A5' size={"20"} /> {"3"} Comments </span>
+                        <div className='flex items-center justify-between gap-2 w-full px-4'>
+                            <span className='flex items-center gap-2 w-full text-[12px] text-[#a5a5a5] leading-[12px]'> <BiCalendar color='#A5A5A5' size={"20"} /> {"February 10, 2023"} </span>
+                            <span className='flex items-center gap-2 w-full text-[12px] text-[#a5a5a5] leading-[12px]'> <AiOutlineComment color='#A5A5A5' size={"20"} /> {"3"} Comments </span>
                         </div>
                     </div>
                 </div>
             </NavLink>
         </div>
-    
+
+        {/* Mobile */}
         <Main id='slider__' className='block w-[100%] lg:hidden'>
             <div className='flex items-start justify-start gap-6 w-[180vw] sm:w-[100vw]'>
                 <NavLink to={``}>
@@ -128,9 +129,9 @@ const NewsComponent = () => {
 
                             <div className='h-[2px] w-full bg-[#A5A5A5]' />
 
-                            <div className='flex items-center justify-between gap-4 w-full px-4'>
-                                <span className='flex items-center gap-2 w-full text-[6.01px] lg:text-[12px] text-[#a5a5a5] leading-[24px]'> <BiCalendar color='#A5A5A5' size={"18.5"} /> {"February 10, 2023"} </span>
-                                <span className='flex items-center gap-2 w-full text-[6.01px] lg:text-[12px] text-[#a5a5a5] leading-[24px]'> <AiOutlineComment color='#A5A5A5' size={"18.5"} /> {"3"} Comments </span>
+                            <div className='flex items-center justify-between gap-2 w-full px-4'>
+                                <span className='flex items-center gap-2 w-full text-[6.01px] lg:text-[12px] text-[#a5a5a5] leading-[12px]'> <BiCalendar color='#A5A5A5' size={"18.5"} /> {"February 10, 2023"} </span>
+                                <span className='flex items-center gap-2 w-full text-[6.01px] lg:text-[12px] text-[#a5a5a5] leading-[12px]'> <AiOutlineComment color='#A5A5A5' size={"18.5"} /> {"3"} Comments </span>
                             </div>
                         </div>
                     </div>
@@ -165,9 +166,9 @@ const NewsComponent = () => {
 
                             <div className='h-[2px] w-full bg-[#A5A5A5]' />
 
-                            <div className='flex items-center justify-between gap-4 w-full px-4'>
-                                <span className='flex items-center gap-2 w-full text-[6.01px] lg:text-[12px] text-[#a5a5a5] leading-[24px]'> <BiCalendar color='#A5A5A5' size={"18.5"} /> {"February 10, 2023"} </span>
-                                <span className='flex items-center gap-2 w-full text-[6.01px] lg:text-[12px] text-[#a5a5a5] leading-[24px]'> <AiOutlineComment color='#A5A5A5' size={"18.5"} /> {"3"} Comments </span>
+                            <div className='flex items-center justify-between gap-2 w-full px-4'>
+                                <span className='flex items-center gap-2 w-full text-[6.01px] lg:text-[12px] text-[#a5a5a5] leading-[12px]'> <BiCalendar color='#A5A5A5' size={"18.5"} /> {"February 10, 2023"} </span>
+                                <span className='flex items-center gap-2 w-full text-[6.01px] lg:text-[12px] text-[#a5a5a5] leading-[12px]'> <AiOutlineComment color='#A5A5A5' size={"18.5"} /> {"3"} Comments </span>
                             </div>
                         </div>
                     </div>

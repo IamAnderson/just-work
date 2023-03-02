@@ -5,7 +5,7 @@ const Newsletter = () => {
   return (
     <div className='bg-[#F2F2FF] w-full py-8 px-8 lg:px-56'>
         <div className='flex flex-col items-center gap-4 w-full'>
-            <span className='text-[#0D58F1] text-[8px] lg:text-[16px] font-extrabold mb-2'> Stay in the Know </span>
+            <span className='text-[#146374] text-[8px] lg:text-[16px] font-extrabold mb-2'> Stay in the Know </span>
             <>
                 <div className='hidden lg:block'>
                     <Heading text1={"Get the best resources to build your portfolio delivered"} text2={"to your mailbox"} txtSm txtSmValue={24} />
