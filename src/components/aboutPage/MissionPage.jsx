@@ -1,11 +1,12 @@
 import React from 'react'
 import Title from '../labels/Title'
+import img from "../../assets/img13.png"
 
 const MissionPage = () => {
   return (
     <div className='flex items-start gap-8 w-full px-4 lg:px-56'>
         <div className='flex-[0.5]'>
-            <img src="" alt="" className='w-full h-full object-contain' />
+            <img src={img} alt="" className='w-full h-full object-contain' />
         </div>
 
         <div className='flex-[0.5] flex flex-col gap-8 w-full items-start'>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { BsSearch } from 'react-icons/bs'
 import Footer from '../../components/Footer'
+import HeaderComponent1 from '../../components/HeaderComponent1'
 import HeaderTitle from '../../components/labels/HeaderTitle'
 import LinkHeaderText from '../../components/labels/LinkHeaderText'
 import Navbar from '../../components/Navbar'
@@ -15,23 +16,9 @@ const ProjectPaths = () => {
         <Navbar />
 
         <>
-            <div className='relative flex flex-col bg-[#fff] w-full '>
-              <div className='project_bg__gradient flex items-center justify-center h-[400px] lg:h-[600px] w-full'>
-                <div className='flex flex-col items-center justify-start gap-8 w-full'>
-                  <div className='flex flex-col items-center gap-1 w-full'>
-                    <div>
-                      <HeaderTitle text={"All Projects"} />
-                    </div>
-                    <div>
-                      <LinkHeaderText txtLight={true} text={"Projects"} />
-                    </div>
-                    <span className='text-[15.51px] lg:text-[18px] text-[#fff] font-medium font-[Montserrat Alternates] text-center leading-[18.91px] lg:leading-[40px] w-full lg:w-[680px] capitalize'> Become a step closer to landing your dream  tech job. Build real world projects created by industry experts and grow your portfolio. </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className='text-[#fff] bg-[#124F35] w-full lg:pt-20 lg:pb-24 lg:px-16'>
+            <HeaderComponent1 text={"All Projects"} text_={"Projects"} text1={"Become a step closer to landing your dream  tech job. Build real world projects created by industry experts and grow your portfolio."} />
+          
+            <div className='text-[#fff] bg-[#fff] w-full lg:py-24 lg:px-16'>
                 <div className='flex items-start gap-8 bg-[#124832] border border-[#B1FD55] rounded-[20px] w-full lg:py-12 lg:px-8'>
                     <div className='flex-[0.3] flex flex-col gap-8 justify-start items-start w-full'>
                         <div className='project_path__search_box__shadow flex flex-col items-start justify-start gap-4 bg-[#14744C80] w-full pt-8 pb-6 px-4'>

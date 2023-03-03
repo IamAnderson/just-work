@@ -3,21 +3,27 @@
         
         <div className='flex flex-col gap-24 w-full pb-24'>
             <div className='relative flex flex-col bg-[#fff] w-full'>
-              <div className='header_bg__img flex items-center justify-center h-[400px] lg:h-[600px] w-full'>
-                <div className='flex flex-col items-center justify-start gap-8 w-full'>
-                  <div className='flex flex-col items-center gap-1 w-full'>
-                    <div>
-                        <HeaderTitle text={"FAQS"} />
-                    </div>
-                    <div>
-                        <LinkHeaderText text={"FAQS"} />
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <HeaderComponent1 text={""} text1={""} />
             </div>
         
         </div>
 
         <Footer />
     </>
+
+    absolute top-[180px] right-[220px]
+absolute top-[310px] right-[220px]
+absolute top-[440px] right-[220px]
+
+
+<>
+                          <div className=''>
+                            <img src={item.img} alt="" className={`lg:w-[378px] lg:h-[108px] object-cover`} />
+                          </div>
+                          <div className=''>
+                            <img src={item.img} alt="" className={`lg:w-[378px] lg:h-[108px] object-cover`} />
+                          </div>
+                          <div className=''>
+                            <img src={item.img} alt="" className={`lg:w-[378px] lg:h-[108px] object-cover`} />
+                          </div>
+                        </>

@@ -24,6 +24,10 @@ import toolImg3 from "../assets/tool3.png"
 import toolImg4 from "../assets/tool4.png"
 import toolImg5 from "../assets/tool5.png"
 
+import frame1 from "../assets/frame1.png"
+import frame2 from "../assets/frame2.png"
+import frame3 from "../assets/frame3.png"
+
 import img13 from "../assets/person1.png";
 import img14 from "../assets/person1.png";
 
@@ -36,6 +40,18 @@ import img24 from "../assets/chartUpWhite.png";
 import img26 from "../assets/lightingWhite.png";
 import img27 from "../assets/salesAnalyticWhite.png";
 import img28 from "../assets/supplyChainWhite.png";
+
+export const commentSlideData = [
+    {
+        img: frame1,
+    },
+    {
+        img: frame2,
+    },
+    {
+        img: frame3
+    }
+]
 
 export const exploreComponentData = [
     {

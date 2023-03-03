@@ -4,8 +4,9 @@ import CheckMText from '../labels/CheckMText'
 import Title from '../labels/Title'
 import img6 from "../../assets/img1.png"
 import img7 from "../../assets/thread2.png"
+import img8 from "../../assets/img12.png"
 
-const AboutComponent = () => {
+const AboutComponent = ({ nxtImg, showBtn }) => {
   return (
     <>
         <div className='DESKTOP hidden lg:block'>
@@ -23,18 +24,22 @@ const AboutComponent = () => {
                     <CheckMText text={"Accelerate your career"} variant={false} />
                     <CheckMText text={"Get real-world experience"} variant={false} />
                     </div>
-                    <div className='rm__gradient text-[14px] text-[#fff] py-2 px-8 rounded-[4px]'>
-                    <NavLink to="about" reloadDocument>
-                        Read more
-                    </NavLink>
-                    </div>
+                    {!showBtn && (
+                        <>
+                            <NavLink to="/about" reloadDocument>
+                                <div className='rm__gradient text-[14px] text-[#fff] py-2 px-8 rounded-[4px]'>
+                                    Read more
+                                </div>
+                            </NavLink>
+                        </>
+                    )}
                 </div>
 
                 <div className='relative w-full'>
-                    <img src={img6} alt="" className='w-[452px] h-[242px] object-cover' />
+                    <img src={nxtImg ? img8 : img6} alt="" className='w-[452px] h-[242px] object-cover' />
                     <div className='absolute bottom-[-30px] -left-5 w-[501.83px]'>
-                    <img src={img7} alt="" className='w-full h-full object-cover' />
-                </div>
+                        <img src={img7} alt="" className='w-full h-full object-cover' />
+                    </div>
                 </div>
             </div>
         </div>
@@ -48,7 +53,7 @@ const AboutComponent = () => {
                 <div className='flex flex-col items-center justify-start w-full pt-8 lg:pt-20 px-8 lg:pl-56 lg:pr-28'>
                 <div className='flex flex-col items-start gap-5 w-[100%]'>
                     <div>
-                    <img src={img6} alt="" className='w-full h-full object-cover' />
+                    <img src={nxtImg ? img8 : img6} alt="" className='w-full h-full object-cover' />
                     </div>
 
                     <span className='text-[#333333] text-[14px] lg:text-[24px] font-extrabold leading-[29.26px] capitalize w-full'> Designed to give you quality real-life experience  in the tech space. </span>
@@ -59,11 +64,15 @@ const AboutComponent = () => {
                     <CheckMText text={"Accelerate Your Career"} variant={false} />
                     <CheckMText text={"Get Real-World Experience"} variant={false} />
                     </div>
-                    <div className='rm__gradient text-[8.3px] lg:text-[14px] text-[#fff] py-1 lg:py-2 px-4 lg:px-8 rounded-[4px]'>
-                    <NavLink to="about">
-                        Read more
-                    </NavLink>
-                    </div>
+                    {!showBtn && (
+                        <>
+                            <NavLink to="/about" reloadDocument>
+                                <div className='rm__gradient text-[8.3px] lg:text-[14px] text-[#fff] py-1 lg:py-2 px-4 lg:px-8 rounded-[4px]'>
+                                    Read more
+                                </div>
+                            </NavLink>
+                        </>
+                    )}
                 </div>
                 </div>
             </>

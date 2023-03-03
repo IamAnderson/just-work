@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import img2 from "../assets/pc.png"
 import img3 from "../assets/chart.png"
 import img4 from "../assets/document.png"
 import img5 from "../assets/thread1.png"
 import img8 from "../assets/img2.png"
+import bgImg from "../assets/bgImg1.png"
 import GetStartedBtn from '../sub-component/GetStartedBtn'
 import { BsPlayCircle } from 'react-icons/bs'
 import Title from '../components/labels/Title'
@@ -14,7 +15,7 @@ import Title1 from '../components/labels/Title1'
 import CheckMText from '../components/labels/CheckMText'
 import ExploreComponent from '../components/homePage/ExploreComponent'
 
-import { exploreComponentData, partnersComponentData, TestimonialData, toolsComponentData } from '../data/data'
+import { commentSlideData, exploreComponentData, partnersComponentData, TestimonialData, toolsComponentData } from '../data/data'
 import { MdOutlineArrowRightAlt } from 'react-icons/md'
 import { HiOutlineArrowNarrowLeft } from "react-icons/hi"
 
@@ -41,6 +42,9 @@ const Main = styled.div`
 `
 
 const Home = () => {
+  const [currentFrame, setCurrentFrame] = useState(0);
+  const lengthOfFrame = commentSlideData.length;
+
   const [current, setCurrent] = useState(0);
   const length = TestimonialData.length;
 
@@ -65,13 +69,35 @@ const Home = () => {
   };
 
 
+
+  const nextFrame = () => {
+    setCurrentFrame(currentFrame === lengthOfFrame - 1 ? 0 : currentFrame + 1);
+  };
+
+  const autoToggle = true;
+  let setIntervalTime
+
+
+  function auto() {
+    setIntervalTime = setInterval (nextFrame, 3000)
+  };
+
+
+  useEffect(() => {
+    if(autoToggle) {
+        auto ()
+    } 
+
+    return () => clearInterval (setIntervalTime)
+  }, [currentFrame]);
+
   return (
     <>
         <Navbar />
         
         <div className='flex flex-col gap-24 w-full'>
           <div className='relative flex flex-col bg-[#fff] w-full'>
-              <div className='header_bg__img flex items-center justify-center h-[400px] lg:h-[600px] w-full px-16'>
+              <div className='header_bg__img_ flex items-center justify-center h-[400px] lg:h-[650px] w-full px-16'>
                 <div className='lg:flex-[0.5] flex flex-col items-start justify-start gap-8 w-full'>
                   <div className='flex flex-col items-start gap-1 w-full'>
                     <span className='text-[15.51px] lg:text-[32px] text-[#fff] font-medium font-[Montserrat Alternates] leading-[18.91px] lg:leading-[50px] capitalize'> Thrive in the Era of Tech by Working </span>
@@ -90,9 +116,22 @@ const Home = () => {
                   </div>
                 </div>
 
-                <div className='lg:flex-[0.5] w-full'>
-                  <img src="" alt="" className='w-full h-full object-contain' />
-                  hh
+                <div className='lg:flex-[0.5] relative flex items-center justify-end w-full'>
+                    <div className='rounded-t-full rounded-b-full overflow-hidden lg:mt-24'>
+                      <img src={bgImg} alt="" className='lg:w-[300px] lg:h-[500px] object-cover' />
+                    </div>
+
+                    <>
+                    <div className='absolute top-[180px] right-0 flex flex-col gap-4 w-full'>
+                      {commentSlideData.map((item, index) => (
+                        <>
+                          <div className={currentFrame !== index && "frame__animation"}>
+                            <img src={item.img} alt="" className={`lg:w-[378px] lg:h-[108px] object-cover ${currentFrame === index && "opacity-[1]"}`} />
+                          </div>
+                        </>
+                      ))}
+                      </div>
+                    </>
                 </div>
 
               </div>

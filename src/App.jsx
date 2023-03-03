@@ -7,6 +7,7 @@ import SignUp from './pages/SignUp'
 import ProjectDetails from './pages/projects/ProjectDetails'
 import ProjectPaths from './pages/projects/ProjectPaths'
 import About from './pages/About'
+import ProjectCollaborators from './pages/ProjectCollaborators'
 
 function App() {
 
@@ -21,7 +22,10 @@ function App() {
               <Route path='/project-paths' element={<ProjectPaths />} />
 
               <Route path='/faqs' element={<Faqs />} />
-              <Route path='/about' element={<About />} />
+              <>
+                <Route path='/about' element={<About />} />
+                <Route path='/project-collaborators' element={<ProjectCollaborators />} />
+              </>
 
               <Route path='/signup' element={<SignUp />} />
           </Routes>

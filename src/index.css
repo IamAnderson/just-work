@@ -35,8 +35,13 @@
 
 .header_bg__img{
     /* background: linear-gradient(172.19deg, #000000 0.11%, rgba(20, 116, 76, 0.78) 93.97%); */
-    background: linear-gradient(173.31deg, rgba(20, 116, 76, 0.78) -50.41%, rgba(177, 253, 85, 0) 94.75%);
+    /* background: linear-gradient(173.31deg, rgba(20, 116, 76, 0.78) -50.41%, rgba(177, 253, 85, 0) 94.75%); */
+    background: url("./assets/bgFrame2.png");
 
+}
+
+.header_bg__img_{
+    background: linear-gradient(172.19deg, #000000 0.11%, rgba(20, 116, 76, 0.78) 93.97%);
 }
 
 .spiral1_bg__img{
@@ -69,6 +74,11 @@
 
 .testimonial_comp__gradient{
     background: linear-gradient(180deg, #146374 0%, #94C15D 100%);
+}
+
+.frame__animation{
+    opacity: 0.4;
+    transition: 0.5s ease all;
 }
 
 .sLide{
