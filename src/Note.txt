@@ -27,3 +27,121 @@ absolute top-[440px] right-[220px]
                             <img src={item.img} alt="" className={`lg:w-[378px] lg:h-[108px] object-cover`} />
                           </div>
                         </>
+
+
+
+
+
+                                        {/* former spiral bg section */}
+                {/* <>
+                  <div className='DESKTOP hidden lg:block spiral1_bg__img absolute bottom-[200px] right-0 left-0 h-[355px] w-full'> 
+                    <div className='relative flex items-start h-full mt-20 px-8 lg:px-56 w-full'>
+                      <div className='flex flex-col lg:flex-row lg:items-start justify-start lg:justify-between w-full z-10'>
+                        <div className='flex flex-col items-start w-[251px]'>
+                          <div className='flex justify-start w-full'>
+                            <div className='header_bg__icon_ flex items-center justify-center h-[100px] w-[100px] bg-[#fff] rounded-full'>
+                              <div className='header_bg__icon flex items-center justify-center w-[68px] h-[64px] rounded-full'>
+                                <img src={img2} alt="" className='w-[22px] h-[20px] object-cover' />
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className='flex flex-col gap-4 items-start w-full'>
+                            <span className='text-[#333333] text-[18px] font-extrabold'> Live Hackathon: </span>
+                            <span className='text-[#878787] text-[12px] leading-[24px]'> Join live hackathons to test your ability in solving real life business cases with other Data Scientists. </span>
+                          </div>
+                        </div>
+
+                        <div className='flex flex-col items-start w-[251px]'>
+                          <div className='flex justify-start w-full'>
+                            <div className='header_bg__icon_ flex items-center justify-center h-[100px] w-[100px] bg-[#fff] rounded-full'>
+                              <div className='header_bg__icon flex items-center justify-center w-[68px] h-[64px] rounded-full'>
+                                <img src={img3} alt="" className='w-[22px] h-[20px] object-cover' />
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className='flex flex-col gap-4 items-start w-full'>
+                            <span className='text-[#333333] text-[18px] font-extrabold'> Industry Grade Projects: </span>
+                            <span className='text-[#878787] text-[12px] leading-[24px]'> Get exposed to cutting-edge projects from leading experts. Assess  projects to improve your skill. </span>
+                          </div>
+                        </div>
+
+                        <div className='flex flex-col items-start w-[251px]'>
+                          <div className='flex justify-start w-full'>
+                            <div className='header_bg__icon_ flex items-center justify-center h-[100px] w-[100px] bg-[#fff] rounded-full'>
+                              <div className='header_bg__icon flex items-center justify-center w-[68px] h-[64px] rounded-full'>
+                                <img src={img4} alt="" className='w-[22px] h-[20px] object-cover' />
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className='flex flex-col gap-4 items-start w-full'>
+                            <span className='text-[#333333] text-[18px] font-extrabold'> Ready Made Solutions: </span>
+                            <span className='text-[#878787] text-[12px] leading-[24px]'> Stop spending weeks building a project from scratch. We have 250+ real business problems solved </span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className='absolute top-[-150px] left-0 w-[100%]'>
+                        <img src={img5} alt="" className='w-full h-full object-cover' />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className='MOBILE block spiral3_bg__img absolute bottom-[-100px] right-0 left-0 h-[355px] w-full lg:hidden'> 
+                    <div className='relative flex items-start h-full mt-20 px-8 lg:px-56 w-full'>
+
+                      <div className='flex flex-col sm:flex-row sm:items-start justify-start sm:justify-between gap-8 w-full z-10'>
+                        <div className='flex flex-col items-start gap-4 w-[251px]'>
+                          <div className='flex justify-start w-full'>
+                            <div className='header_bg__icon_ flex items-center justify-center h-[67.69px] w-[67.69px] lg:h-[100px] lg:w-[100px] bg-[#fff] rounded-full'>
+                              <div className='header_bg__icon flex items-center justify-center w-[46.03px] lg:w-[68px] h-[43.32px] lg:h-[64px] rounded-full'>
+                                <img src={img2} alt="" className='w-[14.89px] lg:w-[22px] h-[13.54px] lg:h-[20px] object-cover' />
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className='flex flex-col gap-4 items-start w-full'>
+                            <span className='text-[#333333] text-[14px] lg:text-[18px] font-extrabold'> Live Hackathon: </span>
+                            <span className='text-[#878787] text-[12px] leading-[24px]'> Join live hackathons to test your ability in solving real life business cases with other Data Scientists. </span>
+                          </div>
+                        </div>
+
+                        <div className='flex flex-col items-start gap-4 w-[251px]'>
+                          <div className='flex justify-start w-full'>
+                            <div className='header_bg__icon_ flex items-center justify-center h-[67.69px] w-[67.69px] lg:h-[100px] lg:w-[100px] bg-[#fff] rounded-full'>
+                              <div className='header_bg__icon flex items-center justify-center w-[46.03px] lg:w-[68px] h-[43.32px] lg:h-[64px] rounded-full'>
+                                <img src={img3} alt="" className='w-[14.89px] lg:w-[22px] h-[13.54px] lg:h-[20px] object-cover' />
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className='flex flex-col gap-4 items-start w-full'>
+                            <span className='text-[#333333] text-[14px] lg:text-[18px] font-extrabold'> Industry Grade Projects: </span>
+                            <span className='text-[#878787] text-[12px] leading-[24px]'> Get exposed to cutting-edge projects from leading experts. Assess  projects to improve your skill. </span>
+                          </div>
+                        </div>
+
+                        <div className='flex flex-col items-start gap-4 w-[251px]'>
+                          <div className='flex justify-start w-full'>
+                            <div className='header_bg__icon_ flex items-center justify-center h-[67.69px] w-[67.69px] lg:h-[100px] lg:w-[100px] bg-[#fff] rounded-full'>
+                              <div className='header_bg__icon flex items-center justify-center w-[46.03px] lg:w-[68px] h-[43.32px] lg:h-[64px] rounded-full'>
+                                <img src={img4} alt="" className='w-[14.89px] lg:w-[22px] h-[13.54px] lg:h-[20px] object-cover' />
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className='flex flex-col gap-4 items-start w-full'>
+                            <span className='text-[#333333] text-[14px] lg:text-[18px] font-extrabold'> Ready Made Solutions: </span>
+                            <span className='text-[#878787] text-[12px] leading-[24px]'> Stop spending weeks building a project from scratch. We have 250+ real business problems solved </span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className='absolute top-[-120px] left-0 w-[100%]'>
+                        <img src={img5} alt="" className='w-full h-full object-cover' />
+                      </div>  
+                    </div>
+                  </div>
+                </> */}

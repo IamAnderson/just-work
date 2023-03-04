@@ -138,14 +138,14 @@ const Footer = () => {
         <>
             <div className='hidden lg:block px-56'>
                 <div className='flex justify-center gap-2 items-center text-[13px] leading-[17.73px] text-center w-full'> 
-                    © 2023. Amdari. All rights reserved.    |    <span className='font-bold'><Link to="privacy-policy" reloadDocument> Privacy Policy </Link></span>  |  <span className='font-bold'><Link to="terms-of-use" reloadDocument> Terms of Use </Link></span>  |  <span className='font-bold'><Link to={{pathname: `//portfolio-anderson.vercel.app/`}} target="_blank"> Developer </Link></span> 
+                    © 2023. Amdari. All rights reserved.    |    <span className='font-bold'><Link to="privacy-policy" reloadDocument> Privacy Policy </Link></span>  |  <span className='font-bold'><Link to="terms-of-use" reloadDocument> Terms of Use </Link></span>  |  <span className='font-bold'> <a href="tel:+2348106264012"> Developer </a> </span> 
                 </div>
             </div>
 
             <div className='block px-8 lg:hidden'>
                 <div className='flex flex-col gap-2 items-center text-[13px] leading-[17.73px] w-full'> 
                     <> © 2023. Amdari. All rights reserved. </>
-                    <div className='flex items-center justify-center gap-2 w-full'> <span className='font-bold'><Link to="privacy-policy" reloadDocument> Privacy Policy </Link></span>  |  <span className='font-bold'><Link to="terms-of-use" reloadDocument> Terms of Use </Link></span>  |  <span className='font-bold'><Link to={{pathname: `//portfolio-anderson.vercel.app/`}} target="_blank"> Developer </Link></span> </div> 
+                    <div className='flex items-center justify-center gap-2 w-full'> <span className='font-bold'><Link to="privacy-policy" reloadDocument> Privacy Policy </Link></span>  |  <span className='font-bold'><Link to="terms-of-use" reloadDocument> Terms of Use </Link></span>  |  <span className='font-bold'> <a href="tel:+2348106264012"> Developer </a> </span> </div> 
                 </div>
             </div>
         </>

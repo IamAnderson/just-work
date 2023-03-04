@@ -21,14 +21,14 @@ const Projects = () => {
 
         <div className='flex flex-col justify-start w-full pb-24'>
             <div className='relative flex flex-col bg-[#fff] w-full mb-20'>
-              <div className='header_bg__img flex items-center justify-center h-[400px] lg:h-[600px] w-full'>
+              <div className='header_bg__img flex items-center justify-center h-[400px] w-full'>
                 <div className='flex flex-col items-center justify-start gap-8 w-full'>
                   <div className='flex flex-col items-center gap-1 w-full'>
                     <div>
                       <HeaderTitle text={"All Projects"} />
                     </div>
                     <div>
-                      <LinkHeaderText text={"Projects"} />
+                      <LinkHeaderText txtLight text={"Projects"} />
                     </div>
                     <span className='text-[15.51px] lg:text-[18px] text-[#fff] font-medium font-[Montserrat Alternates] text-center leading-[18.91px] lg:leading-[40px] w-full lg:w-[773px]'> Become a step closer to landing your dream tech job. Build real world projects created by industry experts and grow your portfolio. </span>
                   </div>

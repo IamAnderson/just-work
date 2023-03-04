@@ -31,6 +31,9 @@ import AboutComponent from '../components/homePage/AboutComponent'
 import StatsComponent from '../components/homePage/StatsComponent'
 import ToolsComponent from '../components/homePage/ToolsComponent'
 import ApproachComponent from '../components/homePage/ApproachComponent'
+import { Fade, Zoom } from 'react-reveal'
+import PopUpComponent from '../components/PopUpComponent'
+import InstructorsWorkComponent from '../components/homePage/InstructorsWorkComponent'
 
 const Main = styled.div`
   overflow-x: scroll;
@@ -42,12 +45,16 @@ const Main = styled.div`
 `
 
 const Home = () => {
+
+  const [showPopup, setShowPopup] = useState(false);
+
   const [currentFrame, setCurrentFrame] = useState(0);
   const lengthOfFrame = commentSlideData.length;
 
   const [current, setCurrent] = useState(0);
   const length = TestimonialData.length;
 
+  // TestimonialComponent Slide
   const prevBtn = () => {
     setCurrent(current === 0 ? length - 1 : current - 1);
   };
@@ -57,7 +64,7 @@ const Home = () => {
   };
 
 
-
+  // ExploreComponent Slide
   const slideLeft = () => {
     var slider = document.getElementById("slider__");
     slider.scrollLeft = slider.scrollLeft - 950;
@@ -69,7 +76,7 @@ const Home = () => {
   };
 
 
-
+  // HeaderComment Toggle
   const nextFrame = () => {
     setCurrentFrame(currentFrame === lengthOfFrame - 1 ? 0 : currentFrame + 1);
   };
@@ -91,214 +98,127 @@ const Home = () => {
     return () => clearInterval (setIntervalTime)
   }, [currentFrame]);
 
+
+  // PopUpComponent Trigger
+  useEffect(() => {
+    setTimeout(() => 
+      setShowPopup(true), 4000
+    );
+  }, [])
+  
+
   return (
     <>
         <Navbar />
+
+        <>
+          {/* {showPopup && (
+            <PopUpComponent closePopUp={() => setShowPopup(false)} />
+          )} */}
+        </>
+        
         
         <div className='flex flex-col gap-24 w-full'>
-          <div className='relative flex flex-col bg-[#fff] w-full'>
-              <div className='header_bg__img_ flex items-center justify-center h-[400px] lg:h-[650px] w-full px-16'>
-                <div className='lg:flex-[0.5] flex flex-col items-start justify-start gap-8 w-full'>
-                  <div className='flex flex-col items-start gap-1 w-full'>
-                    <span className='text-[15.51px] lg:text-[32px] text-[#fff] font-medium font-[Montserrat Alternates] leading-[18.91px] lg:leading-[50px] capitalize'> Thrive in the Era of Tech by Working </span>
-                    <span className='text-[15.51px] lg:text-[32px] text-[#fff] font-medium leading-[18.91px] lg:leading-[50px] capitalize'> on Real-World Problems Using a </span>
-                    <span className='text-[15.51px] lg:text-[32px] text-[#fff] font-medium leading-[18.91px] lg:leading-[50px] capitalize'> Variety of Tools to Build your </span>
-                    <span className='flex items-center gap-2 text-[15.51px] lg:text-[32px] text-[#fff] font-medium leading-[18.91px] lg:leading-[50px] capitalize'> Portfolio In <span className='text-[#B1FD55] font-bold'> DATA SCIENCE </span> </span>
-                  </div>
-                  <div className='flex flex-col lg:flex-row items-start justify-center gap-4'>
-                    <GetStartedBtn />
+          <Fade top>
+            <div className='relative flex flex-col bg-[#fff] w-full'>
+                <div className='relative header_bg__img_ flex items-center lg:items-start justify-center lg:pt-8 h-[400px] lg:h-[750px] w-full px-16'>
+                  <div className='lg:flex-[0.5] flex flex-col items-start justify-start gap-8 w-full lg:pt-[180px]'>
+                    <div className='flex flex-col items-start gap-1 w-full'>
+                      <span className='text-[15.51px] lg:text-[32px] text-[#fff] font-medium font-[Montserrat Alternates] leading-[18.91px] lg:leading-[50px] capitalize'> Thrive in the Era of Tech by Working </span>
+                      <span className='text-[15.51px] lg:text-[32px] text-[#fff] font-medium leading-[18.91px] lg:leading-[50px] capitalize'> on Real-World Problems Using a </span>
+                      <span className='text-[15.51px] lg:text-[32px] text-[#fff] font-medium leading-[18.91px] lg:leading-[50px] capitalize'> Variety of Tools to Build your </span>
+                      <span className='flex items-center gap-2 text-[15.51px] lg:text-[32px] text-[#fff] font-medium leading-[18.91px] lg:leading-[50px] capitalize'> Portfolio In <span className='text-[#B1FD55] font-bold'> DATA SCIENCE </span> </span>
+                    </div>
+                    <div className='flex flex-col lg:flex-row items-start justify-center gap-4'>
+                      <GetStartedBtn />
 
-                    <div className='flex items-center gap-2 text-[#fff]'>
-                      <span className='block cursor-pointer lg:hidden'><BsPlayCircle size={"15"} /></span>
-                      <span className='hidden lg:block cursor-pointer'><BsPlayCircle size={"30"} /></span>
-                      <span className='text-[6.23px] lg:text-[14px] font-[Inter] font-medium leading-[16.94px]'> How it works </span>
+                      <div className='flex items-center gap-2 text-[#fff]'>
+                        <span className='block cursor-pointer lg:hidden'><BsPlayCircle size={"15"} /></span>
+                        <span className='hidden lg:block cursor-pointer'><BsPlayCircle size={"30"} /></span>
+                        <span className='text-[6.23px] lg:text-[14px] font-[Inter] font-medium leading-[16.94px]'> How it works </span>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div className='lg:flex-[0.5] relative flex items-center justify-end w-full'>
-                    <div className='rounded-t-full rounded-b-full overflow-hidden lg:mt-24'>
-                      <img src={bgImg} alt="" className='lg:w-[300px] lg:h-[500px] object-cover' />
-                    </div>
-
-                    <>
-                    <div className='absolute top-[180px] right-0 flex flex-col gap-4 w-full'>
-                      {commentSlideData.map((item, index) => (
-                        <>
-                          <div className={currentFrame !== index && "frame__animation"}>
-                            <img src={item.img} alt="" className={`lg:w-[378px] lg:h-[108px] object-cover ${currentFrame === index && "opacity-[1]"}`} />
-                          </div>
-                        </>
-                      ))}
+                  <div className='hidden lg:flex-[0.5] relative lg:flex items-center justify-end w-full'>
+                      <div className='relative rounded-t-full rounded-b-full overflow-hidden lg:mt-24'>
+                        <img src={bgImg} alt="" className='lg:w-[300px] lg:h-[500px] object-cover' />
                       </div>
-                    </>
-                </div>
 
-              </div>
-              
-
-              {/* former spiral bg section */}
-              {/* <>
-                <div className='DESKTOP hidden lg:block spiral1_bg__img absolute bottom-[200px] right-0 left-0 h-[355px] w-full'> 
-                  <div className='relative flex items-start h-full mt-20 px-8 lg:px-56 w-full'>
-                    <div className='flex flex-col lg:flex-row lg:items-start justify-start lg:justify-between w-full z-10'>
-                      <div className='flex flex-col items-start w-[251px]'>
-                        <div className='flex justify-start w-full'>
-                          <div className='header_bg__icon_ flex items-center justify-center h-[100px] w-[100px] bg-[#fff] rounded-full'>
-                            <div className='header_bg__icon flex items-center justify-center w-[68px] h-[64px] rounded-full'>
-                              <img src={img2} alt="" className='w-[22px] h-[20px] object-cover' />
+                      <>
+                      <div className='header_comment__calc flex flex-col gap-4 w-full'>
+                        {commentSlideData.map((item, index) => (
+                          <>
+                            <div className={currentFrame !== index && "frame__animation"} key={index}>
+                              <img src={item.img} alt="" className={`lg:w-[378px] lg:h-[108px] object-cover ${currentFrame === index && "opacity-[1]"}`} />
                             </div>
-                          </div>
+                          </>
+                        ))}
                         </div>
+                      </>
+                  </div>
 
-                        <div className='flex flex-col gap-4 items-start w-full'>
-                          <span className='text-[#333333] text-[18px] font-extrabold'> Live Hackathon: </span>
-                          <span className='text-[#878787] text-[12px] leading-[24px]'> Join live hackathons to test your ability in solving real life business cases with other Data Scientists. </span>
-                        </div>
-                      </div>
-
-                      <div className='flex flex-col items-start w-[251px]'>
-                        <div className='flex justify-start w-full'>
-                          <div className='header_bg__icon_ flex items-center justify-center h-[100px] w-[100px] bg-[#fff] rounded-full'>
-                            <div className='header_bg__icon flex items-center justify-center w-[68px] h-[64px] rounded-full'>
-                              <img src={img3} alt="" className='w-[22px] h-[20px] object-cover' />
-                            </div>
-                          </div>
-                        </div>
-
-                        <div className='flex flex-col gap-4 items-start w-full'>
-                          <span className='text-[#333333] text-[18px] font-extrabold'> Industry Grade Projects: </span>
-                          <span className='text-[#878787] text-[12px] leading-[24px]'> Get exposed to cutting-edge projects from leading experts. Assess  projects to improve your skill. </span>
-                        </div>
-                      </div>
-
-                      <div className='flex flex-col items-start w-[251px]'>
-                        <div className='flex justify-start w-full'>
-                          <div className='header_bg__icon_ flex items-center justify-center h-[100px] w-[100px] bg-[#fff] rounded-full'>
-                            <div className='header_bg__icon flex items-center justify-center w-[68px] h-[64px] rounded-full'>
-                              <img src={img4} alt="" className='w-[22px] h-[20px] object-cover' />
-                            </div>
-                          </div>
-                        </div>
-
-                        <div className='flex flex-col gap-4 items-start w-full'>
-                          <span className='text-[#333333] text-[18px] font-extrabold'> Ready Made Solutions: </span>
-                          <span className='text-[#878787] text-[12px] leading-[24px]'> Stop spending weeks building a project from scratch. We have 250+ real business problems solved </span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className='absolute top-[-150px] left-0 w-[100%]'>
-                      <img src={img5} alt="" className='w-full h-full object-cover' />
-                    </div>
+                  {/* */}
+                  <div className='absolute -bottom-24 flex items-center justify-center w-full'>
+                    <InstructorsWorkComponent />
                   </div>
                 </div>
+                
 
-                <div className='MOBILE block spiral3_bg__img absolute bottom-[-100px] right-0 left-0 h-[355px] w-full lg:hidden'> 
-                  <div className='relative flex items-start h-full mt-20 px-8 lg:px-56 w-full'>
 
-                    <div className='flex flex-col sm:flex-row sm:items-start justify-start sm:justify-between gap-8 w-full z-10'>
-                      <div className='flex flex-col items-start gap-4 w-[251px]'>
-                        <div className='flex justify-start w-full'>
-                          <div className='header_bg__icon_ flex items-center justify-center h-[67.69px] w-[67.69px] lg:h-[100px] lg:w-[100px] bg-[#fff] rounded-full'>
-                            <div className='header_bg__icon flex items-center justify-center w-[46.03px] lg:w-[68px] h-[43.32px] lg:h-[64px] rounded-full'>
-                              <img src={img2} alt="" className='w-[14.89px] lg:w-[22px] h-[13.54px] lg:h-[20px] object-cover' />
-                            </div>
-                          </div>
-                        </div>
-
-                        <div className='flex flex-col gap-4 items-start w-full'>
-                          <span className='text-[#333333] text-[14px] lg:text-[18px] font-extrabold'> Live Hackathon: </span>
-                          <span className='text-[#878787] text-[12px] leading-[24px]'> Join live hackathons to test your ability in solving real life business cases with other Data Scientists. </span>
-                        </div>
-                      </div>
-
-                      <div className='flex flex-col items-start gap-4 w-[251px]'>
-                        <div className='flex justify-start w-full'>
-                          <div className='header_bg__icon_ flex items-center justify-center h-[67.69px] w-[67.69px] lg:h-[100px] lg:w-[100px] bg-[#fff] rounded-full'>
-                            <div className='header_bg__icon flex items-center justify-center w-[46.03px] lg:w-[68px] h-[43.32px] lg:h-[64px] rounded-full'>
-                              <img src={img3} alt="" className='w-[14.89px] lg:w-[22px] h-[13.54px] lg:h-[20px] object-cover' />
-                            </div>
-                          </div>
-                        </div>
-
-                        <div className='flex flex-col gap-4 items-start w-full'>
-                          <span className='text-[#333333] text-[14px] lg:text-[18px] font-extrabold'> Industry Grade Projects: </span>
-                          <span className='text-[#878787] text-[12px] leading-[24px]'> Get exposed to cutting-edge projects from leading experts. Assess  projects to improve your skill. </span>
-                        </div>
-                      </div>
-
-                      <div className='flex flex-col items-start gap-4 w-[251px]'>
-                        <div className='flex justify-start w-full'>
-                          <div className='header_bg__icon_ flex items-center justify-center h-[67.69px] w-[67.69px] lg:h-[100px] lg:w-[100px] bg-[#fff] rounded-full'>
-                            <div className='header_bg__icon flex items-center justify-center w-[46.03px] lg:w-[68px] h-[43.32px] lg:h-[64px] rounded-full'>
-                              <img src={img4} alt="" className='w-[14.89px] lg:w-[22px] h-[13.54px] lg:h-[20px] object-cover' />
-                            </div>
-                          </div>
-                        </div>
-
-                        <div className='flex flex-col gap-4 items-start w-full'>
-                          <span className='text-[#333333] text-[14px] lg:text-[18px] font-extrabold'> Ready Made Solutions: </span>
-                          <span className='text-[#878787] text-[12px] leading-[24px]'> Stop spending weeks building a project from scratch. We have 250+ real business problems solved </span>
-                        </div>
-                      </div>
+                {/* about amdari */}
+                <Fade>
+                  <div className='DESKTOP spiral2_bg__img hidden lg:block bottom-[-870px] lg:bottom-[-370px] right-0 left-0 h-[551.18px] w-full mt-48'>
+                    <div className='pt-8'>
+                      <AboutComponent checkBlue />
                     </div>
-
-                    <div className='absolute top-[-120px] left-0 w-[100%]'>
-                      <img src={img5} alt="" className='w-full h-full object-cover' />
-                    </div>  
                   </div>
-                </div>
-              </> */}
 
-              {/* about amdari */}
-              <div className='DESKTOP spiral2_bg__img hidden lg:block bottom-[-870px] lg:bottom-[-370px] right-0 left-0 h-[551.18px] w-full mt-24'>
-                <div className='pt-8'>
-                  <AboutComponent />
-                </div>
-              </div>
-
-              <div className='MOBILE block absolute bottom-[-1200px] sm:bottom-[-750px] right-0 left-0 w-full lg:pb-28 lg:hidden mt-20'>
-                <AboutComponent />
-              </div>
-          </div>
+                  <div className='MOBILE block absolute bottom-[-1200px] sm:bottom-[-750px] right-0 left-0 w-full lg:pb-28 lg:hidden mt-20'>
+                    <AboutComponent />
+                  </div>
+                </Fade>
+            </div>
+          </Fade>
 
 
           <div className='flex flex-col justify-start w-full'>
               {/* explore projects */}
-              <div className='flex flex-col items-center gap-8 w-full bg-[#fff] mt-[56rem] sm:mt-[26rem] lg:mt-0 lg:pt-12 px-8 lg:pl-56 mb-20 lg:mb-24'>
-                <div className='flex justify-center items-center w-full lg:block lg:pr-56'>
-                  <Title text={"EXPLORE PROJECTS"} />
-                </div>
-                
-                <>
-                  <div className='hidden lg:block pr-56'>
-                    <Heading text1={"Gain hands-on experience by solving real-world"} text2={"problems with hundreds of projects"} />
+              <Zoom>
+                <div className='flex flex-col items-center gap-8 w-full bg-[#fff] mt-[56rem] sm:mt-[26rem] lg:mt-0 lg:pt-12 px-8 lg:pl-56 mb-20 lg:mb-24'>
+                  <div className='flex justify-center items-center w-full lg:pr-56'>
+                    <Title text={"EXPLORE PROJECTS"} />
                   </div>
                   
-                  <div className='flex justify-center items-center w-full lg:hidden'>
-                    <Heading text1={"Gain hands-on experience by solving real-world problems with hundreds of projects"} />
-                  </div>
-                </>
-                
-
-                <div className='w-full lg:pr-48'>
-                    <div className='relative w-full'>
-                      <div className='hidden lg:block'>
-                        <div className='explore_content_arrow_box__shadow absolute top-[45%] left-[-50px] h-[30px] w-[30px] flex items-center justify-center bg-[#F5F5F5] rounded-full cursor-pointer' onClick={slideLeft}> <HiOutlineArrowNarrowLeft color="#00A2FD" size="20" /> </div>
-                        <div className='explore_content_arrow_box__shadow absolute top-[45%] right-[-40px] h-[30px] w-[30px] flex items-center justify-center bg-[#F5F5F5] rounded-full cursor-pointer' onClick={slideRight}> <MdOutlineArrowRightAlt color="#00A2FD" size="20" /> </div>
-                      </div>
-
-                      <Main id='slider__' className='w-[100%]'>
-                        <div className='flex items-center gap-4 lg:gap-8 w-[400vw] sm:w-[200vw] lg:w-[185vw]'>
-                          {exploreComponentData.map((item, index) => (
-                            <ExploreComponent item={item} key={index} />
-                          ))}
-                        </div>
-                      </Main>
+                  <>
+                    <div className='hidden lg:block pr-56'>
+                      <Heading text1={"Gain hands-on experience by solving real-world"} text2={"problems with hundreds of projects"} />
                     </div>
+                    
+                    <div className='flex justify-center items-center w-full lg:hidden'>
+                      <Heading text1={"Gain hands-on experience by solving real-world problems with hundreds of projects"} />
+                    </div>
+                  </>
+                  
+
+                  <div className='w-full lg:pr-48'>
+                      <div className='relative w-full'>
+                        <div className='hidden lg:block'>
+                          <div className='explore_content_arrow_box__shadow absolute top-[45%] left-[-50px] h-[30px] w-[30px] flex items-center justify-center bg-[#F5F5F5] rounded-full cursor-pointer' onClick={slideLeft}> <HiOutlineArrowNarrowLeft color="#00A2FD" size="20" /> </div>
+                          <div className='explore_content_arrow_box__shadow absolute top-[45%] right-[-40px] h-[30px] w-[30px] flex items-center justify-center bg-[#F5F5F5] rounded-full cursor-pointer' onClick={slideRight}> <MdOutlineArrowRightAlt color="#00A2FD" size="20" /> </div>
+                        </div>
+
+                        <Main id='slider__' className='w-[100%]'>
+                          <div className='flex items-center gap-4 lg:gap-8 w-[400vw] sm:w-[200vw] lg:w-[185vw]'>
+                            {exploreComponentData.map((item, index) => (
+                              <ExploreComponent item={item} key={index} />
+                            ))}
+                          </div>
+                        </Main>
+                      </div>
+                  </div>
                 </div>
-              </div>
+              </Zoom>
 
               {/* 10x better section */}
               <div className='bg_frame__1 w-full'>

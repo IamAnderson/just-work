@@ -31,9 +31,11 @@ const Navbar = () => {
         <>
             <div className="hidden flex-[0.6]  lg:flex justify-start items-center gap-8 px-8">
                 <div>
-                    <span className='flex items-center justify-center h-[26px] w-[26px] border border-[#fff] rounded-full cursor-pointer'>
-                        <FaBars color='#fff' size={"10"} />
-                    </span>
+                    <NavLink to="/projects" reloadDocument>
+                        <span className='flex items-center justify-center h-[26px] w-[26px] border border-[#fff] rounded-full cursor-pointer'>
+                            <FaBars color='#fff' size={"13.85"} />
+                        </span>
+                    </NavLink>
                 </div>
 
                 <div className='flex items-center justify-between w-full h-[64px]'>
@@ -41,16 +43,18 @@ const Navbar = () => {
                         <span className='flex items-center gap-2 text-[#fff] text-[10px] font-[Inter] h-full px-2' onMouseEnter={() => setShowProjBar(false)}> Home <AiOutlineDown color='#fff' size={"8"} /> </span>
                     </NavLink>
                     
-                    <div className='relative'>
+                    {/* <div className='relative'>
                         <span className={`flex items-center gap-2 text-[#fff] text-[10px] font-[Inter] h-full px-2 cursor-pointer ${showProjBar && "bg-[#00A2FD33] border-2 border-[#179DE9] h-[64px]"}`} onMouseEnter={() => setShowProjBar(true)}> Projects <AiOutlineDown color='#fff' size={"8"} /> </span>
                         <>
                             {showProjBar && (
                                 <ProjBar closeProjBar={() => setShowProjBar(false)} />
                             )}
                         </>
-                    </div>
+                    </div> */}
 
-
+                    <NavLink to="/project-paths" reloadDocument style={({ isActive }) => isActive ? activeNav : undefined}>
+                        <span className='flex items-center gap-2 text-[#fff] text-[10px] font-[Inter] h-full px-2' onMouseEnter={() => setShowProjBar(false)}> Projects <AiOutlineDown color='#fff' size={"8"} /> </span>
+                    </NavLink>
                     <NavLink to="/about" reloadDocument style={({ isActive }) => isActive ? activeNav : undefined}>
                         <span className='flex items-center gap-2 text-[#fff] text-[10px] font-[Inter] h-full px-2' onMouseEnter={() => setShowProjBar(false)}> About Us <AiOutlineDown color='#fff' size={"8"} /> </span>
                     </NavLink>
@@ -76,9 +80,9 @@ const Navbar = () => {
                     </span>
                 </div>
 
-                <div className='flex items-center justify-between w-full gap-6'>
+                <div className='flex items-center justify-center w-full'>
                     <NavLink to="/login" reloadDocument>
-                        <span className='text-[10px] text-[#fff] font-bold font-[Inter] py-2 px-5 border border-[#fff] rounded-[4px]'>
+                        <span className='text-[10px] text-[#fff] font-bold font-[Inter] py-2 px-5 border border-[#fff] rounded-[4px] mr-6'>
                             LOGIN
                         </span>
                     </NavLink>

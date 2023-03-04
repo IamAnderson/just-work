@@ -6,7 +6,7 @@ import img6 from "../../assets/img1.png"
 import img7 from "../../assets/thread2.png"
 import img8 from "../../assets/img12.png"
 
-const AboutComponent = ({ nxtImg, showBtn }) => {
+const AboutComponent = ({ nxtImg, showBtn, checkBlue }) => {
   return (
     <>
         <div className='DESKTOP hidden lg:block'>
@@ -19,10 +19,10 @@ const AboutComponent = ({ nxtImg, showBtn }) => {
                     <span className='text-[#333333] text-[24px] font-extrabold leading-[29.26px] capitalize w-[438px]'> Designed to give you quality real-life experience  in the tech space. </span>
                     <span className='text-[#878787] text-[12px] leading-[24px] w-[466px]'> At Amdari, our goal is to get you closer to career success with our ready-made project solutions. Our end-to-end portfolio projects are designed to help you increase your chances of landing a Data Science job. </span>
                     <div className='grid grid-cols-2 gap-4 w-[450px]'>
-                    <CheckMText text={"Build your data science portfolio"} variant={false} />
-                    <CheckMText text={"Become job ready"} variant={false} />
-                    <CheckMText text={"Accelerate your career"} variant={false} />
-                    <CheckMText text={"Get real-world experience"} variant={false} />
+                    <CheckMText blueClr={checkBlue ? true : false} text={"Build your data science portfolio"} variant={false} />
+                    <CheckMText blueClr={checkBlue ? true : false} text={"Become job ready"} variant={false} />
+                    <CheckMText blueClr={checkBlue ? true : false} text={"Accelerate your career"} variant={false} />
+                    <CheckMText blueClr={checkBlue ? true : false} text={"Get real-world experience"} variant={false} />
                     </div>
                     {!showBtn && (
                         <>

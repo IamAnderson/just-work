@@ -44,6 +44,13 @@
     background: linear-gradient(172.19deg, #000000 0.11%, rgba(20, 116, 76, 0.78) 93.97%);
 }
 
+.header_comment__calc{
+    position: absolute;
+    top: 180px;
+
+    right: calc(1350px - 100vw);
+}
+
 .spiral1_bg__img{
     background: url("./assets/spiral1.png");
 }
@@ -106,6 +113,9 @@
     background: url("./assets/statsBg.png");
 }
 
+.popup_btn__gradient{
+    background: linear-gradient(180deg, #006D44 0%, #B1FD55 100%);
+}
 
 /* project section */
 .search_box__shadow{
