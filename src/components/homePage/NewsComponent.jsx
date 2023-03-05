@@ -1,7 +1,7 @@
 import React from 'react'
 import { AiOutlineComment } from 'react-icons/ai'
 import { BiCalendar } from 'react-icons/bi'
-import { Fade } from 'react-reveal'
+import { Fade } from 'react-awesome-reveal'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import img from "../../assets/img5.png"
@@ -24,7 +24,7 @@ const NewsComponent = () => {
     <>
         <div className='DESKTOP hidden lg:flex items-start justify-between gap-2 w-full'>
             <NavLink to={``}>
-                <Fade cascade bottom>
+                <Fade cascade down>
                 <div className='flex items-start w-full h-full'>
                     <div className='flex-[0.30] flex items-start w-full'>
                         <img src={img} alt="" className='w-full h-[325.16px] object-cover' />
@@ -63,7 +63,7 @@ const NewsComponent = () => {
             </NavLink>
 
             <NavLink to={``}>
-                <Fade cascade bottom>
+                <Fade cascade down>
                 <div className='news_comp__box_shadow flex items-start w-full'>
                     <div className='flex-[0.30] flex items-start w-full'>
                         <img src={img} alt="" className='w-full h-[325.16px] object-cover' />
@@ -106,7 +106,7 @@ const NewsComponent = () => {
         <Main id='slider__' className='block w-[100%] lg:hidden'>
             <div className='flex items-start justify-start gap-6 w-[180vw] sm:w-[100vw]'>
                 <NavLink to={``}>
-                    <Fade cascade bottom>
+                    <Fade cascade down>
                     <div className='flex items-start w-[100%] border-[0.5px] border-[#C4C4C4] rounded-[10px]'>
                         <div className='flex-[0.40] flex items-start w-full'>
                             <img src={img} alt="" className='h-[190px] object-contain' />
@@ -145,7 +145,7 @@ const NewsComponent = () => {
                 </NavLink>
 
                 <NavLink to={``}>
-                    <Fade cascade bottom>
+                    <Fade cascade down>
                     <div className='flex items-start w-[100%] border-[0.5px] border-[#C4C4C4] rounded-[10px]'>
                         <div className='flex-[0.40] flex items-start w-full'>
                             <img src={img} alt="" className='h-[190px] object-contain' />

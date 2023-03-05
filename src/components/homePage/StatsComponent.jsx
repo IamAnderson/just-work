@@ -1,11 +1,11 @@
 import React from 'react'
 import { BsStarFill } from 'react-icons/bs'
-import { Fade } from 'react-reveal'
+import { Fade } from 'react-awesome-reveal'
 import img9 from "../../assets/thread3.png"
 
 const StatsComponent = ({ showAll }) => {
   return (
-    <Fade bottom>
+    <Fade down>
         <div className='relative text-[#fff] mb-20 lg:mb-36 px-8 lg:px-56'>
             <Fade cascade bottom>
                 <div className='stats_bg__frame flex flex-col lg:flex-row items-center justify-start lg:justify-between w-full rounded-[20px] pt-16 pb-16 lg:pb-6 px-10 lg:px-24'>

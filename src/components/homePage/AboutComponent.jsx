@@ -5,7 +5,7 @@ import Title from '../labels/Title'
 import img6 from "../../assets/img1.png"
 import img7 from "../../assets/thread2.png"
 import img8 from "../../assets/img12.png"
-import { Fade } from 'react-reveal'
+import { Fade } from 'react-awesome-reveal'
 
 const AboutComponent = ({ nxtImg, showBtn, checkBlue }) => {
   return (
@@ -16,7 +16,7 @@ const AboutComponent = ({ nxtImg, showBtn, checkBlue }) => {
             </div>
 
             <div className='flex items-start justify-between w-full pt-20 pl-56 pr-28'>
-                <Fade bottom cascade>
+                <Fade down cascade>
                     <div className='flex flex-col items-start gap-5 w-[100%]'>
                         <span className='text-[#333333] text-[24px] font-extrabold leading-[29.26px] capitalize w-[438px]'> Designed to give you quality real-life experience  in the tech space. </span>
                         <span className='text-[#878787] text-[12px] leading-[24px] w-[466px]'> At Amdari, our goal is to get you closer to career success with our ready-made project solutions. Our end-to-end portfolio projects are designed to help you increase your chances of landing a Data Science job. </span>

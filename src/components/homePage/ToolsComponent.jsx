@@ -1,5 +1,5 @@
 import React from 'react'
-import { Zoom } from 'react-reveal'
+import { Zoom } from 'react-awesome-reveal'
 
 const ToolsComponent = ({ item }) => {
   return (

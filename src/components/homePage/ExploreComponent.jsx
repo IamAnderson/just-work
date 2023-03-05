@@ -2,7 +2,7 @@ import React from 'react'
 import Heading from '../labels/Heading'
 import { MdOutlineArrowRightAlt } from "react-icons/md"
 import { NavLink } from 'react-router-dom'
-import { Zoom } from 'react-reveal'
+import { Zoom } from 'react-awesome-reveal'
 
 const ExploreComponent = ({ item }) => {
   return (
