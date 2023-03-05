@@ -48,6 +48,8 @@ const Home = () => {
 
   const [showPopup, setShowPopup] = useState(false);
 
+  const [showBgImg, setShowBgImg] = useState(false);
+
   const [currentFrame, setCurrentFrame] = useState(0);
   const lengthOfFrame = commentSlideData.length;
 
@@ -102,47 +104,57 @@ const Home = () => {
   // PopUpComponent Trigger
   useEffect(() => {
     setTimeout(() => 
-      setShowPopup(true), 4000
+      setShowPopup(true), 4500
     );
   }, [])
   
+
+  //showBgImg Trigger
+  useEffect(() => {
+    setTimeout(() =>
+      setShowBgImg(true), 1500
+    );
+  }, [])
 
   return (
     <>
         <Navbar />
 
         <>
-          {/* {showPopup && (
+          {showPopup && (
             <PopUpComponent closePopUp={() => setShowPopup(false)} />
-          )} */}
+          )}
         </>
         
         
         <div className='flex flex-col gap-24 w-full'>
-          <Fade top>
             <div className='relative flex flex-col bg-[#fff] w-full'>
-                <div className='relative header_bg__img_ flex items-center lg:items-start justify-center lg:pt-8 h-[400px] lg:h-[750px] w-full px-16'>
-                  <div className='lg:flex-[0.5] flex flex-col items-start justify-start gap-8 w-full lg:pt-[180px]'>
-                    <div className='flex flex-col items-start gap-1 w-full'>
-                      <span className='text-[15.51px] lg:text-[32px] text-[#fff] font-medium font-[Montserrat Alternates] leading-[18.91px] lg:leading-[50px] capitalize'> Thrive in the Era of Tech by Working </span>
-                      <span className='text-[15.51px] lg:text-[32px] text-[#fff] font-medium leading-[18.91px] lg:leading-[50px] capitalize'> on Real-World Problems Using a </span>
-                      <span className='text-[15.51px] lg:text-[32px] text-[#fff] font-medium leading-[18.91px] lg:leading-[50px] capitalize'> Variety of Tools to Build your </span>
-                      <span className='flex items-center gap-2 text-[15.51px] lg:text-[32px] text-[#fff] font-medium leading-[18.91px] lg:leading-[50px] capitalize'> Portfolio In <span className='text-[#B1FD55] font-bold'> DATA SCIENCE </span> </span>
-                    </div>
-                    <div className='flex flex-col lg:flex-row items-start justify-center gap-4'>
-                      <GetStartedBtn />
-
-                      <div className='flex items-center gap-2 text-[#fff]'>
-                        <span className='block cursor-pointer lg:hidden'><BsPlayCircle size={"15"} /></span>
-                        <span className='hidden lg:block cursor-pointer'><BsPlayCircle size={"30"} /></span>
-                        <span className='text-[6.23px] lg:text-[14px] font-[Inter] font-medium leading-[16.94px]'> How it works </span>
+                <div className='relative header_bg__img_ flex flex-col lg:flex-row items-center lg:items-start justify-center lg:pt-8 h-[830px] lg:h-[750px] w-full px-4 lg:px-16'>
+                  <div className='lg:flex-[0.5] flex flex-col items-start justify-start gap-8 w-full pt-24 lg:pt-[180px]'>
+                    <Zoom cascade left>
+                      <div className='flex flex-col items-center lg:items-start gap-1 w-full'>
+                        <span className='text-[15.51px] lg:text-[32px] text-[#fff] font-bold font-[Montserrat Alternates] leading-[18.91px] lg:leading-[50px] capitalize'> Thrive in the Era of Tech by Working </span>
+                        <span className='text-[15.51px] lg:text-[32px] text-[#fff] font-bold leading-[18.91px] lg:leading-[50px] capitalize'> on Real-World Problems Using a </span>
+                        <span className='text-[15.51px] lg:text-[32px] text-[#fff] font-bold leading-[18.91px] lg:leading-[50px] capitalize'> Variety of Tools to Build your </span>
+                        <span className='flex items-center gap-2 text-[15.51px] lg:text-[32px] text-[#fff] font-bold leading-[18.91px] lg:leading-[50px] capitalize'> Portfolio In <span className='text-[#B1FD55] font-black'> DATA SCIENCE </span> </span>
                       </div>
-                    </div>
+                    </Zoom>
+                    <Fade>
+                      <div className='flex items-center lg:justify-start justify-center gap-4 w-full'>
+                        <GetStartedBtn />
+
+                        <div className='flex items-center gap-2 text-[#fff]'>
+                          <span className='block cursor-pointer lg:hidden'><BsPlayCircle size={"15"} /></span>
+                          <span className='hidden lg:block cursor-pointer'><BsPlayCircle size={"30"} /></span>
+                          <span className='text-[6.23px] lg:text-[14px] font-[Inter] font-medium leading-[16.94px]'> How it works </span>
+                        </div>
+                      </div>
+                    </Fade>
                   </div>
 
-                  <div className='hidden lg:flex-[0.5] relative lg:flex items-center justify-end w-full'>
-                      <div className='relative rounded-t-full rounded-b-full overflow-hidden lg:mt-24'>
-                        <img src={bgImg} alt="" className='lg:w-[300px] lg:h-[500px] object-cover' />
+                  <div className={`flex-[0.5] relative flex items-center justify-end w-full ${showBgImg ? "show_bg__img" : "opacity-0"}`}>
+                      <div className='relative rounded-t-full rounded-b-full overflow-hidden mt-4 lg:mt-24'>
+                        <img src={bgImg} alt="" className='w-[100%] lg:w-[300px] h-[400px] lg:h-[500px] object-cover' />
                       </div>
 
                       <>
@@ -150,7 +162,7 @@ const Home = () => {
                         {commentSlideData.map((item, index) => (
                           <>
                             <div className={currentFrame !== index && "frame__animation"} key={index}>
-                              <img src={item.img} alt="" className={`lg:w-[378px] lg:h-[108px] object-cover ${currentFrame === index && "opacity-[1]"}`} />
+                              <img src={item.img} alt="" className={`w-[187.55px] lg:w-[378px] h-[53.59px] lg:h-[108px] object-cover ${currentFrame === index && "opacity-[1]"}`} />
                             </div>
                           </>
                         ))}
@@ -159,33 +171,35 @@ const Home = () => {
                   </div>
 
                   {/* */}
-                  <div className='absolute -bottom-24 flex items-center justify-center w-full'>
+                  <div className='DESKTOP hidden lg:flex absolute -bottom-24 items-center justify-center w-full'>
                     <InstructorsWorkComponent />
                   </div>
                 </div>
                 
-
+                  {/* */}
+                  <div className='MOBILE block w-full lg:hidden'>
+                    <InstructorsWorkComponent />
+                  </div>
 
                 {/* about amdari */}
                 <Fade>
-                  <div className='DESKTOP spiral2_bg__img hidden lg:block bottom-[-870px] lg:bottom-[-370px] right-0 left-0 h-[551.18px] w-full mt-48'>
+                  <div className='DESKTOP spiral2_bg__img hidden lg:block h-[551.18px] w-full mt-48'>
                     <div className='pt-8'>
                       <AboutComponent checkBlue />
                     </div>
                   </div>
 
-                  <div className='MOBILE block absolute bottom-[-1200px] sm:bottom-[-750px] right-0 left-0 w-full lg:pb-28 lg:hidden mt-20'>
+                  <div className='MOBILE block w-full lg:hidden mt-16'>
                     <AboutComponent />
                   </div>
                 </Fade>
             </div>
-          </Fade>
 
 
           <div className='flex flex-col justify-start w-full'>
               {/* explore projects */}
-              <Zoom>
-                <div className='flex flex-col items-center gap-8 w-full bg-[#fff] mt-[56rem] sm:mt-[26rem] lg:mt-0 lg:pt-12 px-8 lg:pl-56 mb-20 lg:mb-24'>
+              <Fade bottom>
+                <div className='flex flex-col items-center gap-8 w-full bg-[#fff] lg:pt-12 px-8 lg:pl-56 mb-20 lg:mb-24'>
                   <div className='flex justify-center items-center w-full lg:pr-56'>
                     <Title text={"EXPLORE PROJECTS"} />
                   </div>
@@ -218,38 +232,41 @@ const Home = () => {
                       </div>
                   </div>
                 </div>
-              </Zoom>
+              </Fade>
 
               {/* 10x better section */}
               <div className='bg_frame__1 w-full'>
                 <div className='flex flex-col lg:flex-row items-start gap-24 lg:gap-0 pt-8'>
                     <div className='lg:flex-[0.4] pt-16 px-8 lg:pl-56'>
-                      <div className='mb-4 lg:mb-20'>
-                        <Title1 text={"Become 10x Better"} />
-                      </div>
-                      <div className='flex flex-col items-start gap-6'>
-                        <div>
-                          <Heading text1={"How our Projects Set you Up for "} text2={"Career Success"} colorWhite posiStart />
+                      <Fade bottom>
+                        <div className='mb-4 lg:mb-20'>
+                          <Title1 text={"Become 10x Better"} />
                         </div>
-                        <div className='flex flex-col items-start gap-4 lg:gap-6'>
-                          <CheckMText variant text={"You can get a job by building a project portfolio with our reusable projects."} />
-                          <CheckMText variant text={"We connect you to experienced mentors for career guidance."} />
-                          <CheckMText variant text={"You get work done faster with our ready-made solution templates."} />
-                          <CheckMText variant text={"Get ideas for PoCs from our sample use-cases"} />
-                          <CheckMText variant text={"You gain access to 50+ enterprise-grade projects."} />
-                          <CheckMText variant text={"We build your confidence to build real world projects by learning from real industry experts."} />
-                        </div>    
-                        <NavLink to="/signup" reloadDocument>
-                          <div className='rm__gradient flex items-center justify-center w-[101.72px] lg:w-[183px] h-[19.79px] lg:h-[36px] text-[7.7px] lg:text-[14px] text-[#fff] font-medium'>
-                            Get started for free
-                          </div>                  
-                        </NavLink>
+                        <div className='flex flex-col items-start gap-6'>
+                          <div>
+                            <Heading text1={"How our Projects Set you Up for "} text2={"Career Success"} colorWhite posiStart />
+                          </div>
+                          <div className='flex flex-col items-start gap-4 lg:gap-6'>
+                            <CheckMText variant text={"You can get a job by building a project portfolio with our reusable projects."} />
+                            <CheckMText variant text={"We connect you to experienced mentors for career guidance."} />
+                            <CheckMText variant text={"You get work done faster with our ready-made solution templates."} />
+                            <CheckMText variant text={"Get ideas for PoCs from our sample use-cases"} />
+                            <CheckMText variant text={"You gain access to 50+ enterprise-grade projects."} />
+                            <CheckMText variant text={"We build your confidence to build real world projects by learning from real industry experts."} />
+                          </div>    
+                          <NavLink to="/signup" reloadDocument>
+                            <div className='rm__gradient flex items-center justify-center w-[101.72px] lg:w-[183px] h-[19.79px] lg:h-[36px] text-[7.7px] lg:text-[14px] text-[#fff] font-medium'>
+                              Get started for free
+                            </div>                  
+                          </NavLink>
+                        </div>
+                      </Fade>
+                    </div>
+                    <Fade right>
+                      <div className='lg:flex-[0.6]'>
+                        <img src={img8} alt="" className='w-full lg:w-[839px] h-[100%] object-cover' />
                       </div>
-
-                    </div>
-                    <div className='lg:flex-[0.6]'>
-                      <img src={img8} alt="" className='w-full lg:w-[839px] h-[100%] object-cover' />
-                    </div>
+                    </Fade>
                 </div>   
               </div>
 
@@ -288,78 +305,86 @@ const Home = () => {
 
 
               {/* tools covered section */}
-              <div className='flex flex-col items-center gap-8 w-full px-8 lg:px-0 mb-36'>
-                <div className='flex justify-center items-center w-full lg:px-56'>
-                   <Title text={'Tools Covered'} />
-                </div>
+              <Fade>
+                <div className='flex flex-col items-center gap-8 w-full px-8 lg:px-0 mb-36'>
+                  <div className='flex justify-center items-center w-full lg:px-56'>
+                    <Title text={'Tools Covered'} />
+                  </div>
 
-                <div className='flex items-center justify-between flex-wrap gap-2 lg:gap-4 w-full px-8 lg:px-56'>
-                  {toolsComponentData.map((item, index) => (
-                    <ToolsComponent item={item} key={index} />
-                  ))}
+                  <div className='flex items-center justify-between flex-wrap gap-2 lg:gap-4 w-full px-8 lg:px-56'>
+                    {toolsComponentData.map((item, index) => (
+                      <ToolsComponent item={item} key={index} />
+                    ))}
+                  </div>
                 </div>
-              </div>
+              </Fade>
 
 
               {/* testimonials section */}
-              <div className='bg_frame__1 w-full mb-28'>
-                <div className='flex flex-col items-center gap-16 w-full py-20 px-8 lg:px-20'>
-                    <div>
-                      <Title1 text={"What people have to say"} />
-                    </div>
-                    <div className='hidden lg:block'>
-                      <Heading text1={" Loved by learners and professionals from "} text2={"hundreds of companies"} colorWhite />
-                    </div>
+              <Fade bottom>
+                <div className='bg_frame__1 w-full mb-28'>
+                  <Zoom cascade bottom>
+                    <div className='flex flex-col items-center gap-16 w-full py-20 px-8 lg:px-20'>
+                        <div>
+                          <Title1 text={"What people have to say"} />
+                        </div>
+                        <div className='hidden lg:block'>
+                          <Heading text1={" Loved by learners and professionals from "} text2={"hundreds of companies"} colorWhite />
+                        </div>
 
-                    <div className='block lg:hidden'>
-                      <Heading text1={" Loved by learners and professionals"} text2={"from hundreds of companies"} colorWhite />
+                        <div className='block lg:hidden'>
+                          <Heading text1={" Loved by learners and professionals"} text2={"from hundreds of companies"} colorWhite />
+                        </div>
+
+                        <div className='relative border border-[#00A2FD] py-16 lg:px-8 w-full rounded-[20px]'>
+                          <div>
+                            <div className='explore_content_arrow_box__shadow absolute top-[45%] left-[-20px] h-[30px] w-[30px] flex items-center justify-center bg-[transparent] border border-[#fff] rounded-full cursor-pointer' onClick={prevBtn}> <HiOutlineArrowNarrowLeft color="#fff" size="20" /> </div>
+                            <div className='explore_content_arrow_box__shadow absolute top-[45%] right-[-20px] h-[30px] w-[30px] flex items-center justify-center bg-[#F5F5F5] rounded-full cursor-pointer' onClick={nextBtn}> <MdOutlineArrowRightAlt color="#00A2FD" size="20" /> </div>
+                          </div>
+
+                          <div className='flex items-start justify-center w-full mb-8'>
+                            {
+                              TestimonialData.map((item, index) => {
+                                  return (
+                                      <>
+                                          <div className={current === index ? 'sLide active' : 'sLide'}>
+                                              {current === index && (
+                                                  <TestimonialComp item={item} key={index} />
+                                              )}
+                                          </div>
+                                      </>
+                                  )
+                              })
+                            }
+                          </div>
+
+                          <div className='flex justify-center items-center gap-2 lg:gap-4'>
+                              <span className={`h-[7px] lg:h-[14px] w-[7px] lg:w-[14px] rounded-full ${current === 0 ? "dot_title__component lg:h-[10px] w-[10px]" : "bg-[#fff]"}`} onClick={() => setCurrent(0)}/>
+                              <span className={`h-[7px] lg:h-[14px] w-[7px] lg:w-[14px] rounded-full ${current === 1 ? "dot_title__component lg:h-[10px] w-[10px]" : "bg-[#fff]"}`} onClick={() => setCurrent(1)} />
+                              <span className={`h-[7px] lg:h-[14px] w-[7px] lg:w-[14px] rounded-full ${current === 2 ? "dot_title__component lg:h-[10px] w-[10px]" : "bg-[#fff]"}`} onClick={() => setCurrent(2)}/>
+                          </div>
+                        </div>
                     </div>
-
-                    <div className='relative border border-[#00A2FD] py-16 lg:px-8 w-full rounded-[20px]'>
-                      <div>
-                        <div className='explore_content_arrow_box__shadow absolute top-[45%] left-[-20px] h-[30px] w-[30px] flex items-center justify-center bg-[transparent] border border-[#fff] rounded-full cursor-pointer' onClick={prevBtn}> <HiOutlineArrowNarrowLeft color="#fff" size="20" /> </div>
-                        <div className='explore_content_arrow_box__shadow absolute top-[45%] right-[-20px] h-[30px] w-[30px] flex items-center justify-center bg-[#F5F5F5] rounded-full cursor-pointer' onClick={nextBtn}> <MdOutlineArrowRightAlt color="#00A2FD" size="20" /> </div>
-                      </div>
-
-                      <div className='flex items-start justify-center w-full mb-8'>
-                        {
-                          TestimonialData.map((item, index) => {
-                              return (
-                                  <>
-                                      <div className={current === index ? 'sLide active' : 'sLide'}>
-                                          {current === index && (
-                                              <TestimonialComp item={item} key={index} />
-                                          )}
-                                      </div>
-                                  </>
-                              )
-                          })
-                        }
-                      </div>
-
-                      <div className='flex justify-center items-center gap-2 lg:gap-4'>
-                          <span className={`h-[7px] lg:h-[14px] w-[7px] lg:w-[14px] rounded-full ${current === 0 ? "dot_title__component lg:h-[10px] w-[10px]" : "bg-[#fff]"}`} onClick={() => setCurrent(0)}/>
-                          <span className={`h-[7px] lg:h-[14px] w-[7px] lg:w-[14px] rounded-full ${current === 1 ? "dot_title__component lg:h-[10px] w-[10px]" : "bg-[#fff]"}`} onClick={() => setCurrent(1)} />
-                          <span className={`h-[7px] lg:h-[14px] w-[7px] lg:w-[14px] rounded-full ${current === 2 ? "dot_title__component lg:h-[10px] w-[10px]" : "bg-[#fff]"}`} onClick={() => setCurrent(2)}/>
-                      </div>
-                    </div>
-                </div>
-              </div> 
+                  </Zoom>
+                </div> 
+              </Fade>
 
               {/* news section */}
-              <div className='flex flex-col items-start gap-4 lg:gap-8 w-full px-8 lg:pl-56 mb-20 lg:mb-32'>
-                <div className='flex justify-start lg:justify-center items-center w-full lg:block '>
-                  <Title text={"Our Blog"} />
-                </div>
+              <Zoom cascade bottom>
+                <div className='flex flex-col items-start gap-4 lg:gap-8 w-full px-8 lg:pl-56 mb-20 lg:mb-32'>
+                  <div className='flex justify-start lg:justify-center items-center w-full lg:block '>
+                    <Title text={"Our Blog"} />
+                  </div>
 
-                <div>
-                  <Heading1 text1={"Our Latest News"} />
-                </div>
+                  <div>
+                    <Heading1 text1={"Our Latest News"} />
+                  </div>
 
-                <div className='flex items-start w-full lg:pr-24'>
-                  <NewsComponent />
+                  <div className='flex items-start w-full lg:pr-24'>
+                    <NewsComponent />
+                  </div>
                 </div>
-              </div>
+              </Zoom>
               
               {/* newsletter */}
               <div className='mb-20 lg:mb-0'>

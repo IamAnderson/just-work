@@ -41,6 +41,8 @@ import img26 from "../assets/lightingWhite.png";
 import img27 from "../assets/salesAnalyticWhite.png";
 import img28 from "../assets/supplyChainWhite.png";
 
+import img29 from "../assets/img14.png"
+
 export const commentSlideData = [
     {
         img: frame1,
@@ -265,5 +267,79 @@ export const NewsComponentData = [
         img: img15,
         commentNo: 3,
         date: "February 10, 2023"
+    },
+]
+
+export const collaboratorsDetailsData = [
+    {
+        id: 1,
+        name: "Habeeb Zakariya",
+        img: img29,
+        twitterLink: "",
+        inLink: ""
+    },
+
+    {
+        id: 2,
+        name: "Abdur-Rasheed Adeoye",
+        img: img29,
+        twitterLink: "",
+        inLink: ""
+    },
+
+    {
+        id: 3,
+        name: "Emmanuel Ogungbemi",
+        img: img29,
+        twitterLink: "",
+        inLink: ""
+    },
+
+    {
+        id: 4,
+        name: "Obinna Onyema",
+        img: img29,
+        twitterLink: "",
+        inLink: ""
+    },
+
+    {
+        id: 5,
+        name: "Chinazam Akagha",
+        img: img29,
+        twitterLink: "",
+        inLink: ""
+    },
+
+    {
+        id: 6,
+        name: "Ibrahim Vastmindz",
+        img: img29,
+        twitterLink: "",
+        inLink: ""
+    },
+
+    {
+        id: 7,
+        name: "Abdulrahman",
+        img: img29,
+        twitterLink: "",
+        inLink: ""
+    },
+
+    {
+        id: 8,
+        name: "Haleemah Utiva",
+        img: img29,
+        twitterLink: "",
+        inLink: ""
+    },
+
+    {
+        id: 9,
+        name: "Akeelah",
+        img: img29,
+        twitterLink: "",
+        inLink: ""
     },
 ]

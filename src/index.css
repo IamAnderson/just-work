@@ -51,6 +51,19 @@
     right: calc(1350px - 100vw);
 }
 
+@media screen and (max-width:1024px) {
+    .header_comment__calc{
+        position: absolute;
+        top: 100px;
+        right: 0;
+    }
+}
+
+.show_bg__img{
+    opacity: 1;
+    transition: 0.75s ease all;
+}
+
 .spiral1_bg__img{
     background: url("./assets/spiral1.png");
 }

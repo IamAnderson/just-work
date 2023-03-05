@@ -29,11 +29,11 @@ const Faqs = () => {
                         <AccordionItem className='w-full'>
                             <AccordionItemHeading className='w-full'>
                                 <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#14744C] border-[#C4C4C4] py-4 px-2'>
-                                    <p className='text-[#fff] text-[12px] font-medium font-[Inter] leading-[14.52px]'> Do I need to download any software to assess and download projects on Amdari? </p>
+                                    <p className='text-[#fff] text-[14px] font-medium font-[Inter] leading-[14.52px]'> Do I need to download any software to assess and download projects on Amdari? </p>
                                     <p> <BsArrowDownShort color='#fff' size={"20"} /> </p>
                                 </AccordionItemButton>
                             </AccordionItemHeading>
-                            <AccordionItemPanel className='accordion_box__shadow text-[#A5A5A5] text-[12px] leading-[14.52px] font-[Inter] w-full py-4 px-2'>
+                            <AccordionItemPanel className='accordion_box__shadow text-[#A5A5A5] text-[14px] leading-[18.52px] font-[Inter] w-full py-4 px-2'>
                             No. You can assess all projects on Amdari without having to install any software—all the 
                 projects’ solutions can be completed in your browser.
                             </AccordionItemPanel>
@@ -42,11 +42,11 @@ const Faqs = () => {
                         <AccordionItem>
                             <AccordionItemHeading>
                                 <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#14744C] border-[#C4C4C4] py-4 px-2'>
-                                    <p className='text-[#fff] text-[12px] font-medium font-[Inter] leading-[14.52px]'> Can I share my completed projects? </p>
+                                    <p className='text-[#fff] text-[14px] font-medium font-[Inter] leading-[14.52px]'> Can I share my completed projects? </p>
                                     <p> <BsArrowDownShort color='#fff' size={"20"} /> </p>
                                 </AccordionItemButton>
                             </AccordionItemHeading>
-                            <AccordionItemPanel className='accordion_box__shadow text-[#A5A5A5] text-[12px] leading-[14.52px] font-[Inter] w-full py-4 px-2'>
+                            <AccordionItemPanel className='accordion_box__shadow text-[#A5A5A5] text-[14px] leading-[18.52px] font-[Inter] w-full py-4 px-2'>
                             Yes. You can download both complete and incomplete projects to add to your 
 GitHub or any other personal portfolio.
                             </AccordionItemPanel>
@@ -55,11 +55,11 @@ GitHub or any other personal portfolio.
                         <AccordionItem>
                             <AccordionItemHeading>
                                 <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#14744C] border-[#C4C4C4] py-4 px-2'>
-                                    <p className='text-[#fff] text-[12px] font-medium font-[Inter] leading-[14.52px]'> How does the Amdari subscription work? </p>
+                                    <p className='text-[#fff] text-[14px] font-medium font-[Inter] leading-[14.52px]'> How does the Amdari subscription work? </p>
                                     <p> <BsArrowDownShort color='#fff' size={"20"} /> </p>
                                 </AccordionItemButton>
                             </AccordionItemHeading>
-                            <AccordionItemPanel className='accordion_box__shadow text-[#A5A5A5] text-[12px] leading-[14.52px] font-[Inter] w-full py-4 px-2'>
+                            <AccordionItemPanel className='accordion_box__shadow text-[#A5A5A5] text-[14px] leading-[18.52px] font-[Inter] w-full py-4 px-2'>
                             Once you subscribe, you will immediately have unlimited access to all projects and 
 resources. There’s no limit to the projects you have access to and you can cancel at 
 anytime. You also get access to the new projects added to the library every month.
@@ -70,11 +70,11 @@ anytime. You also get access to the new projects added to the library every mont
                         <AccordionItem>
                             <AccordionItemHeading>
                                 <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#14744C] border-[#C4C4C4] py-4 px-2'>
-                                    <p className='text-[#fff] text-[12px] font-medium font-[Inter] leading-[14.52px]'> What is inside each project ? </p>
+                                    <p className='text-[#fff] text-[14px] font-medium font-[Inter] leading-[14.52px]'> What is inside each project ? </p>
                                     <p> <BsArrowDownShort color='#fff' size={"20"} /> </p>
                                 </AccordionItemButton>
                             </AccordionItemHeading>
-                            <AccordionItemPanel className='accordion_box__shadow text-[#A5A5A5] text-[12px] leading-[14.52px] font-[Inter] w-full py-4 px-2'>
+                            <AccordionItemPanel className='accordion_box__shadow text-[#A5A5A5] text-[14px] leading-[18.52px] font-[Inter] w-full py-4 px-2'>
                                 <li> Text file </li>
                                 <li> Datasets </li>
                                 <li> Detailed documentation to help you with the tools </li>
@@ -85,11 +85,11 @@ anytime. You also get access to the new projects added to the library every mont
                         <AccordionItem>
                             <AccordionItemHeading>
                                 <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#14744C] border-[#C4C4C4] py-4 px-2'>
-                                    <p className='text-[#fff] text-[12px] font-medium font-[Inter] leading-[14.52px]'> Is the subscription fee only for a specific project? </p>
+                                    <p className='text-[#fff] text-[14px] font-medium font-[Inter] leading-[14.52px]'> Is the subscription fee only for a specific project? </p>
                                     <p> <BsArrowDownShort color='#fff' size={"20"} /> </p>
                                 </AccordionItemButton>
                             </AccordionItemHeading>
-                            <AccordionItemPanel className='accordion_box__shadow text-[#A5A5A5] text-[12px] leading-[14.52px] font-[Inter] w-full py-4 px-2'>
+                            <AccordionItemPanel className='accordion_box__shadow text-[#A5A5A5] text-[14px] leading-[18.52px] font-[Inter] w-full py-4 px-2'>
                             No - the annual subscription gives you unlimited access to all projects. You will get access 
 to all our projects in all categories and learning paths.
                             </AccordionItemPanel>
@@ -98,11 +98,11 @@ to all our projects in all categories and learning paths.
                         <AccordionItem>
                             <AccordionItemHeading>
                                 <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#14744C] border-[#C4C4C4] py-4 px-2'>
-                                    <p className='text-[#fff] text-[12px] font-medium font-[Inter] leading-[14.52px]'> Can I get some more information about your company and team ? </p>
+                                    <p className='text-[#fff] text-[14px] font-medium font-[Inter] leading-[14.52px]'> Can I get some more information about your company and team ? </p>
                                     <p> <BsArrowDownShort color='#fff' size={"20"} /> </p>
                                 </AccordionItemButton>
                             </AccordionItemHeading>
-                            <AccordionItemPanel className='accordion_box__shadow text-[#A5A5A5] text-[12px] leading-[14.52px] font-[Inter] w-full py-4 px-2'>
+                            <AccordionItemPanel className='accordion_box__shadow text-[#A5A5A5] text-[14px] leading-[18.52px] font-[Inter] w-full py-4 px-2'>
                             Of course, please click here (Link to about page) to read more about our company and our 
 mission statement. Our contact information is here (Link to contact page).
 
@@ -112,11 +112,11 @@ mission statement. Our contact information is here (Link to contact page).
                         <AccordionItem>
                             <AccordionItemHeading>
                                 <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#14744C] border-[#C4C4C4] py-4 px-2'>
-                                    <p className='text-[#fff] text-[12px] font-medium font-[Inter] leading-[14.52px]'> What do you mean by end-to-end projects ? </p>
+                                    <p className='text-[#fff] text-[14px] font-medium font-[Inter] leading-[14.52px]'> What do you mean by end-to-end projects ? </p>
                                     <p> <BsArrowDownShort color='#fff' size={"20"} /> </p>
                                 </AccordionItemButton>
                             </AccordionItemHeading>
-                            <AccordionItemPanel className='accordion_box__shadow text-[#A5A5A5] text-[12px] leading-[14.52px] font-[Inter] w-full py-4 px-2'>
+                            <AccordionItemPanel className='accordion_box__shadow text-[#A5A5A5] text-[14px] leading-[18.52px] font-[Inter] w-full py-4 px-2'>
                             <p className='mb-4'>{"For Machine Learning Projects for example, every project under it implements the full life cycle: Sourcing the data -> Exploratory data analysis (EDA) -> Data cleaning -> Data manipulation -> Modeling -> Hyper parameter tuning -> Testing -> Visualization -> Deployment."}</p>
                             <p>
                                 {"For Big Data Projects, it implements the full pipeline: Sourcing the data -> Ingestion (batch or streaming) -> Initial data analysis -> Moving to data store -> Complex data analysis -> Moving analyzed data to storage -> Visualization -> Deployment."}
@@ -127,11 +127,11 @@ mission statement. Our contact information is here (Link to contact page).
                         <AccordionItem>
                             <AccordionItemHeading>
                                 <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#14744C] border-[#C4C4C4] py-4 px-2'>
-                                    <p className='text-[#fff] text-[12px] font-medium font-[Inter] leading-[14.52px]'> Who is implementing these projects ? </p>
+                                    <p className='text-[#fff] text-[14px] font-medium font-[Inter] leading-[14.52px]'> Who is implementing these projects ? </p>
                                     <p> <BsArrowDownShort color='#fff' size={"20"} /> </p>
                                 </AccordionItemButton>
                             </AccordionItemHeading>
-                            <AccordionItemPanel className='accordion_box__shadow text-[#A5A5A5] text-[12px] leading-[14.52px] font-[Inter] w-full py-4 px-2'>
+                            <AccordionItemPanel className='accordion_box__shadow text-[#A5A5A5] text-[14px] leading-[18.52px] font-[Inter] w-full py-4 px-2'>
                                 All our projects are implemented by industry experts from companies such as DPD Ireland, Munvo, NATS, Keyrock etc. They create projects similar to the live projects they have deployed in their work environments.
                             </AccordionItemPanel>
                         </AccordionItem>
@@ -139,11 +139,11 @@ mission statement. Our contact information is here (Link to contact page).
                         <AccordionItem>
                             <AccordionItemHeading>
                                 <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#14744C] border-[#C4C4C4] py-4 px-2'>
-                                    <p className='text-[#fff] text-[12px] font-medium font-[Inter] leading-[14.52px]'> Once I enroll, do I get access to all new projects that you add ? </p>
+                                    <p className='text-[#fff] text-[14px] font-medium font-[Inter] leading-[14.52px]'> Once I enroll, do I get access to all new projects that you add ? </p>
                                     <p> <BsArrowDownShort color='#fff' size={"20"} /> </p>
                                 </AccordionItemButton>
                             </AccordionItemHeading>
-                            <AccordionItemPanel className='accordion_box__shadow text-[#A5A5A5] text-[12px] leading-[14.52px] font-[Inter] w-full py-4 px-2'>
+                            <AccordionItemPanel className='accordion_box__shadow text-[#A5A5A5] text-[14px] leading-[18.52px] font-[Inter] w-full py-4 px-2'>
                             Yes - every month we add 9-10 new projects. You don't have to pay anything extra for this. 
 You can even tell us what kind of projects you would like us to add and we will use your 
 feedback to prioritize our project's roadmap.
@@ -154,11 +154,11 @@ feedback to prioritize our project's roadmap.
                         <AccordionItem>
                             <AccordionItemHeading>
                                 <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#14744C] border-[#C4C4C4] py-4 px-2'>
-                                    <p className='text-[#fff] text-[12px] font-medium font-[Inter] leading-[14.52px]'> How does this help in my job interviews and current projects ? </p>
+                                    <p className='text-[#fff] text-[14px] font-medium font-[Inter] leading-[14.52px]'> How does this help in my job interviews and current projects ? </p>
                                     <p> <BsArrowDownShort color='#fff' size={"20"} /> </p>
                                 </AccordionItemButton>
                             </AccordionItemHeading>
-                            <AccordionItemPanel className='accordion_box__shadow text-[#A5A5A5] text-[12px] leading-[14.52px] font-[Inter] w-full py-4 px-2'>
+                            <AccordionItemPanel className='accordion_box__shadow text-[#A5A5A5] text-[14px] leading-[18.52px] font-[Inter] w-full py-4 px-2'>
                                 <li> Demonstrate that you can be useful immediately on live projects - Companies like to 
       hire candidates who don't have to be trained much.</li>
       <li>
@@ -172,11 +172,11 @@ Troubleshoot your live projects with our ready-to-use code. </li>
                         <AccordionItem>
                             <AccordionItemHeading>
                                 <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#14744C] border-[#C4C4C4] py-4 px-2'>
-                                    <p className='text-[#fff] text-[12px] font-medium font-[Inter] leading-[14.52px]'> What are the prerequisites ? </p>
+                                    <p className='text-[#fff] text-[14px] font-medium font-[Inter] leading-[14.52px]'> What are the prerequisites ? </p>
                                     <p> <BsArrowDownShort color='#fff' size={"20"} /> </p>
                                 </AccordionItemButton>
                             </AccordionItemHeading>
-                            <AccordionItemPanel className='accordion_box__shadow text-[#A5A5A5] text-[12px] leading-[14.52px] font-[Inter] w-full py-4 px-2'>
+                            <AccordionItemPanel className='accordion_box__shadow text-[#A5A5A5] text-[14px] leading-[18.52px] font-[Inter] w-full py-4 px-2'>
                             We offer learning paths to guide you from beginner to advanced projects. All our projects 
 are self contained and come with all the prerequisite materials needed. As long as you 
 know coding in any language, these projects will work for you.
@@ -186,11 +186,11 @@ know coding in any language, these projects will work for you.
                         <AccordionItem>
                             <AccordionItemHeading>
                                 <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#14744C] border-[#C4C4C4] py-4 px-2'>
-                                    <p className='text-[#fff] text-[12px] font-medium font-[Inter] leading-[14.52px]'> Do you provide technical support? </p>
+                                    <p className='text-[#fff] text-[14px] font-medium font-[Inter] leading-[14.52px]'> Do you provide technical support? </p>
                                     <p> <BsArrowDownShort color='#fff' size={"20"} /> </p>
                                 </AccordionItemButton>
                             </AccordionItemHeading>
-                            <AccordionItemPanel className='accordion_box__shadow text-[#A5A5A5] text-[12px] leading-[14.52px] font-[Inter] w-full py-4 px-2'>
+                            <AccordionItemPanel className='accordion_box__shadow text-[#A5A5A5] text-[14px] leading-[18.52px] font-[Inter] w-full py-4 px-2'>
                             Yes, our technical support team will answer your questions within 24 hours.
                             </AccordionItemPanel>
                         </AccordionItem>
@@ -198,11 +198,11 @@ know coding in any language, these projects will work for you.
                         <AccordionItem>
                             <AccordionItemHeading>
                                 <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#14744C] border-[#C4C4C4] py-4 px-2'>
-                                    <p className='text-[#fff] text-[12px] font-medium font-[Inter] leading-[14.52px]'> How are these projects better than doing a course? </p>
+                                    <p className='text-[#fff] text-[14px] font-medium font-[Inter] leading-[14.52px]'> How are these projects better than doing a course? </p>
                                     <p> <BsArrowDownShort color='#fff' size={"20"} /> </p>
                                 </AccordionItemButton>
                             </AccordionItemHeading>
-                            <AccordionItemPanel className='accordion_box__shadow text-[#A5A5A5] text-[12px] leading-[14.52px] font-[Inter] w-full py-4 px-2'>
+                            <AccordionItemPanel className='accordion_box__shadow text-[#A5A5A5] text-[14px] leading-[18.52px] font-[Inter] w-full py-4 px-2'>
                             Courses are mostly theoretical with a few projects. What we offer is 100% projects with a 
 little bit of theory. No matter how many courses you take, you will get stuck in real industry 
 projects. We solve that problem for you and give you confidence to face real industry 
@@ -214,11 +214,11 @@ projects.
                         <AccordionItem>
                             <AccordionItemHeading>
                                 <AccordionItemButton className='flex items-center justify-between gap-1 w-full border bg-[#14744C] border-[#C4C4C4] py-4 px-2'>
-                                    <p className='text-[#fff] text-[12px] font-medium font-[Inter] leading-[14.52px]'> Can I cancel my plan? </p>
+                                    <p className='text-[#fff] text-[14px] font-medium font-[Inter] leading-[14.52px]'> Can I cancel my plan? </p>
                                     <p> <BsArrowDownShort color='#fff' size={"20"} /> </p>
                                 </AccordionItemButton>
                             </AccordionItemHeading>
-                            <AccordionItemPanel className='accordion_box__shadow text-[#A5A5A5] text-[12px] leading-[14.52px] font-[Inter] w-full py-4 px-2'>
+                            <AccordionItemPanel className='accordion_box__shadow text-[#A5A5A5] text-[14px] leading-[18.52px] font-[Inter] w-full py-4 px-2'>
                             Yes. You can cancel your plan anytime. Your subscription will remain active till the end of 
 your subscription period.
                             </AccordionItemPanel>

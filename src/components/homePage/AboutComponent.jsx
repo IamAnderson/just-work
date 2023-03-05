@@ -5,35 +5,38 @@ import Title from '../labels/Title'
 import img6 from "../../assets/img1.png"
 import img7 from "../../assets/thread2.png"
 import img8 from "../../assets/img12.png"
+import { Fade } from 'react-reveal'
 
 const AboutComponent = ({ nxtImg, showBtn, checkBlue }) => {
   return (
     <>
         <div className='DESKTOP hidden lg:block'>
-            <div className='flex justify-center items-center w-full lg:block px-56'>
+            <div className='block px-56'>
                 <Title text={"ABOUT AMDARI"} />
             </div>
 
             <div className='flex items-start justify-between w-full pt-20 pl-56 pr-28'>
-                <div className='flex flex-col items-start gap-5 w-[100%]'>
-                    <span className='text-[#333333] text-[24px] font-extrabold leading-[29.26px] capitalize w-[438px]'> Designed to give you quality real-life experience  in the tech space. </span>
-                    <span className='text-[#878787] text-[12px] leading-[24px] w-[466px]'> At Amdari, our goal is to get you closer to career success with our ready-made project solutions. Our end-to-end portfolio projects are designed to help you increase your chances of landing a Data Science job. </span>
-                    <div className='grid grid-cols-2 gap-4 w-[450px]'>
-                    <CheckMText blueClr={checkBlue ? true : false} text={"Build your data science portfolio"} variant={false} />
-                    <CheckMText blueClr={checkBlue ? true : false} text={"Become job ready"} variant={false} />
-                    <CheckMText blueClr={checkBlue ? true : false} text={"Accelerate your career"} variant={false} />
-                    <CheckMText blueClr={checkBlue ? true : false} text={"Get real-world experience"} variant={false} />
+                <Fade bottom cascade>
+                    <div className='flex flex-col items-start gap-5 w-[100%]'>
+                        <span className='text-[#333333] text-[24px] font-extrabold leading-[29.26px] capitalize w-[438px]'> Designed to give you quality real-life experience  in the tech space. </span>
+                        <span className='text-[#878787] text-[12px] leading-[24px] w-[466px]'> At Amdari, our goal is to get you closer to career success with our ready-made project solutions. Our end-to-end portfolio projects are designed to help you increase your chances of landing a Data Science job. </span>
+                        <div className='grid grid-cols-2 gap-4 w-[450px]'>
+                        <CheckMText blueClr={checkBlue ? true : false} text={"Build your data science portfolio"} variant={false} />
+                        <CheckMText blueClr={checkBlue ? true : false} text={"Become job ready"} variant={false} />
+                        <CheckMText blueClr={checkBlue ? true : false} text={"Accelerate your career"} variant={false} />
+                        <CheckMText blueClr={checkBlue ? true : false} text={"Get real-world experience"} variant={false} />
+                        </div>
+                        {!showBtn && (
+                            <>
+                                <NavLink to="/about" reloadDocument>
+                                    <div className='rm__gradient text-[14px] text-[#fff] py-2 px-8 rounded-[4px]'>
+                                        Read more
+                                    </div>
+                                </NavLink>
+                            </>
+                        )}
                     </div>
-                    {!showBtn && (
-                        <>
-                            <NavLink to="/about" reloadDocument>
-                                <div className='rm__gradient text-[14px] text-[#fff] py-2 px-8 rounded-[4px]'>
-                                    Read more
-                                </div>
-                            </NavLink>
-                        </>
-                    )}
-                </div>
+                </Fade>
 
                 <div className='relative w-full'>
                     <img src={nxtImg ? img8 : img6} alt="" className='w-[452px] h-[242px] object-cover' />
@@ -46,8 +49,8 @@ const AboutComponent = ({ nxtImg, showBtn, checkBlue }) => {
 
         <div className='MOBILE block lg:hidden'>
             <>
-                <div className='flex justify-center items-center w-full lg:block pt-8 px-8 lg:px-56'>
-                <Title text={"ABOUT AMDARI"} />
+                <div className='flex justify-center items-center w-full md:block pt-8 px-8 lg:px-56'>
+                    <Title text={"ABOUT AMDARI"} />
                 </div>
 
                 <div className='flex flex-col items-center justify-start w-full pt-8 lg:pt-20 px-8 lg:pl-56 lg:pr-28'>
