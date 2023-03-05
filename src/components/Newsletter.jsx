@@ -1,11 +1,11 @@
 import React from 'react'
-import { Zoom } from 'react-reveal'
+import { Zoom } from 'react-awesome-reveal'
 import Heading from './labels/Heading'
 
 const Newsletter = () => {
   return (
     <div className='bg-[#F2F2FF] w-full py-8 px-8 lg:px-56'>
-        <Zoom cascade bottom>
+        <Zoom cascade down>
             <div className='flex flex-col items-center gap-4 w-full'>
                 <span className='text-[#146374] text-[8px] lg:text-[16px] font-extrabold mb-2'> Stay in the Know </span>
                 <Zoom>
