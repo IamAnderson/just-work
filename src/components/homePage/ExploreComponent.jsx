@@ -2,12 +2,12 @@ import React from 'react'
 import Heading from '../labels/Heading'
 import { MdOutlineArrowRightAlt } from "react-icons/md"
 import { NavLink } from 'react-router-dom'
-import { Zoom } from 'react-awesome-reveal'
+import { Slide } from 'react-awesome-reveal'
 
 const ExploreComponent = ({ item }) => {
   return (
-    <Zoom right cascade>
-        <div className='flex flex-col items-center gap-6 pt-8 pb-6 px-4 border border-[#C4C4C4] rounded-[10px] w-[181.83px] lg:w-[286px] h-[315.19px] lg:h-[436px]'>
+      <div className='flex flex-col items-center gap-6 pt-8 pb-6 px-4 border border-[#C4C4C4] rounded-[10px] w-[181.83px] lg:w-[286px] h-[315.19px] lg:h-[436px]'>
+            <Slide direction='down' damping={1}>
             <div className='mb-2'>
                 <img src={item.img} alt="" className='w-[50px] lg:w-[80px] h-[55px] lg:h-[90px] object-cover' />
             </div>
@@ -29,8 +29,8 @@ const ExploreComponent = ({ item }) => {
                     </span>
                 </div>
             </NavLink>
+    </Slide>
         </div>
-    </Zoom>
   )
 }
 

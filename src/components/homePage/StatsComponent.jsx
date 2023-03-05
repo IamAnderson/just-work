@@ -5,10 +5,10 @@ import img9 from "../../assets/thread3.png"
 
 const StatsComponent = ({ showAll }) => {
   return (
-    <Fade down>
+    <>
         <div className='relative text-[#fff] mb-20 lg:mb-36 px-8 lg:px-56'>
-            <Fade cascade bottom>
                 <div className='stats_bg__frame flex flex-col lg:flex-row items-center justify-start lg:justify-between w-full rounded-[20px] pt-16 pb-16 lg:pb-6 px-10 lg:px-24'>
+            <Fade cascade direction='down' damping={0.1} triggerOnce>
                     <div className='flex flex-col justify-start'>
                         <span className='explore_component__gradient1 hidden lg:flex items-center justify-center h-[30px] w-[30px] rounded-full'> <BsStarFill size={"14 "} color="#fff" /> </span>
                         <span className='text-[64px] leading-[78.02px] font-extrabold'> {"40+"} </span>
@@ -48,11 +48,11 @@ const StatsComponent = ({ showAll }) => {
                             </div>
                         )}
                     </>
-                </div>
             </Fade>
+                </div>
             <img src={img9} alt="" className='absolute hidden lg:block top-[-120px] left-0 w-full h-full object-cover' />
         </div>
-    </Fade>
+    </>
   )
 }
 

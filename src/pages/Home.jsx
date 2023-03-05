@@ -31,7 +31,7 @@ import AboutComponent from '../components/homePage/AboutComponent'
 import StatsComponent from '../components/homePage/StatsComponent'
 import ToolsComponent from '../components/homePage/ToolsComponent'
 import ApproachComponent from '../components/homePage/ApproachComponent'
-import { Fade, Zoom } from 'react-awesome-reveal'
+import { Fade, Zoom, Slide } from 'react-awesome-reveal'
 import PopUpComponent from '../components/PopUpComponent'
 import InstructorsWorkComponent from '../components/homePage/InstructorsWorkComponent'
 
@@ -202,7 +202,7 @@ const Home = () => {
 
           <div className='flex flex-col justify-start w-full'>
               {/* explore projects */}
-              <Fade down>
+              <Fade>
                 <div className='flex flex-col items-center gap-8 w-full bg-[#fff] lg:pt-12 px-8 lg:pl-56 mb-20 lg:mb-24'>
                   <div className='flex justify-center items-center w-full lg:pr-56'>
                     <Title text={"EXPLORE PROJECTS"} />
@@ -242,35 +242,39 @@ const Home = () => {
               <div className='bg_frame__1 w-full'>
                 <div className='flex flex-col lg:flex-row items-start gap-24 lg:gap-0 pt-8'>
                     <div className='lg:flex-[0.4] pt-16 px-8 lg:pl-56'>
-                      <Fade down>
+                      <Fade cascade damping={0.2}>
                         <div className='mb-4 lg:mb-20'>
                           <Title1 text={"Become 10x Better"} />
                         </div>
+                      </Fade>
                         <div className='flex flex-col items-start gap-6'>
                           <div>
                             <Heading text1={"How our Projects Set you Up for "} text2={"Career Success"} colorWhite posiStart />
                           </div>
                           <div className='flex flex-col items-start gap-4 lg:gap-6'>
+                          <Fade cascade damping={0.2}>
                             <CheckMText variant text={"You can get a job by building a project portfolio with our reusable projects."} />
                             <CheckMText variant text={"We connect you to experienced mentors for career guidance."} />
                             <CheckMText variant text={"You get work done faster with our ready-made solution templates."} />
                             <CheckMText variant text={"Get ideas for PoCs from our sample use-cases"} />
                             <CheckMText variant text={"You gain access to 50+ enterprise-grade projects."} />
                             <CheckMText variant text={"We build your confidence to build real world projects by learning from real industry experts."} />
+                          </Fade>
                           </div>    
+                          <Fade cascade damping={1.2}>
                           <NavLink to="/signup" reloadDocument>
                             <div className='rm__gradient flex items-center justify-center w-[101.72px] lg:w-[183px] h-[19.79px] lg:h-[36px] text-[7.7px] lg:text-[14px] text-[#fff] font-medium'>
                               Get started for free
                             </div>                  
                           </NavLink>
+                          </Fade>
                         </div>
-                      </Fade>
                     </div>
-                    <Fade right>
+                    <Slide direction="down" triggerOnce>
                       <div className='lg:flex-[0.6]'>
                         <img src={img8} alt="" className='w-full lg:w-[839px] h-[100%] object-cover' />
                       </div>
-                    </Fade>
+                    </Slide>
                 </div>   
               </div>
 
@@ -309,11 +313,12 @@ const Home = () => {
 
 
               {/* tools covered section */}
-              <Fade>
                 <div className='flex flex-col items-center gap-8 w-full px-8 lg:px-0 mb-36'>
-                  <div className='flex justify-center items-center w-full lg:px-56'>
-                    <Title text={'Tools Covered'} />
-                  </div>
+                <Fade>
+                    <div className='flex justify-center items-center w-full lg:px-56'>
+                      <Title text={'Tools Covered'} />
+                    </div>
+                  </Fade>
 
                   <div className='flex items-center justify-between flex-wrap gap-2 lg:gap-4 w-full px-8 lg:px-56'>
                     {toolsComponentData.map((item, index) => (
@@ -321,14 +326,13 @@ const Home = () => {
                     ))}
                   </div>
                 </div>
-              </Fade>
 
 
               {/* testimonials section */}
-              <Fade down>
+              <>
                 <div className='bg_frame__1 w-full mb-28'>
-                  <Zoom cascade down>
                     <div className='flex flex-col items-center gap-16 w-full py-20 px-8 lg:px-20'>
+                      <Zoom cascade damping={0.3}>
                         <div>
                           <Title1 text={"What people have to say"} />
                         </div>
@@ -339,6 +343,7 @@ const Home = () => {
                         <div className='block lg:hidden'>
                           <Heading text1={" Loved by learners and professionals"} text2={"from hundreds of companies"} colorWhite />
                         </div>
+                      </Zoom>
 
                         <div className='relative border border-[#00A2FD] py-16 lg:px-8 w-full rounded-[20px]'>
                           <div>
@@ -369,12 +374,11 @@ const Home = () => {
                           </div>
                         </div>
                     </div>
-                  </Zoom>
                 </div> 
-              </Fade>
+              </>
 
               {/* news section */}
-              <Zoom cascade down>
+              <>
                 <div className='flex flex-col items-start gap-4 lg:gap-8 w-full px-8 lg:pl-56 mb-20 lg:mb-32'>
                   <div className='flex justify-start lg:justify-center items-center w-full lg:block '>
                     <Title text={"Our Blog"} />
@@ -388,7 +392,7 @@ const Home = () => {
                     <NewsComponent />
                   </div>
                 </div>
-              </Zoom>
+              </>
               
               {/* newsletter */}
               <div className='mb-20 lg:mb-0'>

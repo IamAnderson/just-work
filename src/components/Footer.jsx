@@ -8,10 +8,10 @@ import logo1 from "../assets/logo2.png";
 
 const Footer = () => {
   return (
-    <Fade>
+    <>
         <div className='bg-[#14744C] text-[#fff] w-full py-12 lg:pt-16 lg:pb-8 '>
             <div className='flex flex-col lg:flex-row items-center lg:items-start justify-start lg:justify-between gap-8 lg:gap-0 w-full px-8 lg:px-24'>
-                <Fade cascade down>
+                <Fade cascade damping={0.25}>
                     <div className='flex flex-col items-start gap-6 w-[313px]'>
                         <span className='hidden lg:block h-[20px] pr-8'>
                             <img src={logo1} alt="" className='h-full w-full object-contain' />
@@ -155,7 +155,7 @@ const Footer = () => {
             </>
             
         </div>
-    </Fade>
+    </>
   )
 }
 

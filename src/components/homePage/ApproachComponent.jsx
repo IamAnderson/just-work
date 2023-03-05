@@ -6,7 +6,7 @@ import MethodologyApproachComponent from './MethodologyApproachComponent'
 
 const ApproachComponent = () => {
   return (
-    <Fade down>
+    <Fade>
         <div className='flex flex-col items-center gap-8 w-full pl-8 lg:pl-56'>
             <div className='flex justify-center items-center w-full pr-8 lg:pr-56'>
                 <Title text={"Our Approach"} />

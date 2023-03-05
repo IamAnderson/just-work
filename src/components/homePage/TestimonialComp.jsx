@@ -7,7 +7,7 @@ const TestimonialComp = ({ item }) => {
   return (
     <>
         <div className='DESKTOP hidden lg:flex items-start justify-between gap-4 w-full'>
-            <Fade cascade down>
+            <Fade cascade damping={0.2}>
                 <div className='flex flex-col items-start text-[#fff] pt-4 pb-6 px-4 w-[505px]'>
                     <div className='flex items-center justify-start gap-2 w-full bg-[#14744CA8] p-6'>
                         <img src={item.img} alt="" className='w-[64px] h-[64px] object-cover rounded-full' />
@@ -38,7 +38,7 @@ const TestimonialComp = ({ item }) => {
                 </div>
             </Fade>
 
-            <Fade cascade down>
+            <Fade cascade damping={0.2}>
                 <div className='flex flex-col items-start text-[#fff] pt-4 pb-6 px-4 w-[505px]'>
                     <div className='flex items-center justify-start gap-2 w-full bg-[#14744CA8] p-6'>
                         <img src={item.img1} alt="" className='w-[64px] h-[64px] object-cover rounded-full' />
@@ -69,7 +69,7 @@ const TestimonialComp = ({ item }) => {
         </div>
 
         <div className='flex items-start justify-between gap-4 w-full lg:hidden'>
-            <Fade cascade down>
+            <Fade cascade damping={0.2}>
                 <div className='flex flex-col items-start text-[#fff] pt-4 pb-6 px-4 w-[100%]'>
                     <div className='flex items-center justify-start gap-2 w-full bg-[#14744CA8] p-6'>
                         <img src={item.img} alt="" className='w-[34.42px] h-[34.42px] object-cover rounded-full' />
