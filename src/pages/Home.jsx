@@ -103,13 +103,18 @@ const Home = () => {
 
   // PopUpComponent Trigger
   useEffect(() => {
-    let pop_status = localStorage.getItem('pop_status');
-    if(!pop_status){
-      setTimeout(() => 
-        setShowPopup(true), 4500
-      );
-      localStorage.setItem('pop_status', 1);
-    }
+
+    setTimeout(() => 
+      setShowPopup(true), 4500
+    );
+
+    // let pop_status = localStorage.getItem('pop_status');
+    // if(!pop_status){
+    //   setTimeout(() => 
+    //     setShowPopup(true), 4500
+    //   );
+    //   localStorage.setItem('pop_status', 1);
+    // }
   }, [])
 
 
@@ -135,7 +140,7 @@ const Home = () => {
             <div className='relative flex flex-col bg-[#fff] w-full'>
                 <div className='relative header_bg__img_ flex flex-col lg:flex-row items-center lg:items-start justify-center lg:pt-8 h-[830px] lg:h-[750px] w-full px-4 lg:px-16'>
                   <div className='lg:flex-[0.5] flex flex-col items-start justify-start gap-8 w-full pt-24 lg:pt-[180px]'>
-                    <Fade cascade>
+                    <Fade cascade className='w-full'>
                       <div className='flex flex-col items-center lg:items-start gap-1 w-full'>
                         <span className='text-[15.51px] lg:text-[32px] text-[#fff] font-bold font-[Montserrat Alternates] leading-[18.91px] lg:leading-[50px] capitalize'> Thrive in the Era of Tech by Working </span>
                         <span className='text-[15.51px] lg:text-[32px] text-[#fff] font-bold leading-[18.91px] lg:leading-[50px] capitalize'> on Real-World Problems Using a </span>
@@ -143,7 +148,7 @@ const Home = () => {
                         <span className='flex items-center gap-2 text-[15.51px] lg:text-[32px] text-[#fff] font-bold leading-[18.91px] lg:leading-[50px] capitalize'> Portfolio In <span className='text-[#B1FD55] font-black'> DATA SCIENCE </span> </span>
                       </div>
                     </Fade>
-                    <Fade>
+                    <Fade className='w-full'>
                       <div className='flex items-center lg:justify-start justify-center gap-4 w-full'>
                         <GetStartedBtn />
 
@@ -314,7 +319,7 @@ const Home = () => {
 
               {/* tools covered section */}
                 <div className='flex flex-col items-center gap-8 w-full px-8 lg:px-0 mb-36'>
-                <Fade>
+                <Fade triggerOnce>
                     <div className='flex justify-center items-center w-full lg:px-56'>
                       <Title text={'Tools Covered'} />
                     </div>
@@ -332,7 +337,7 @@ const Home = () => {
               <>
                 <div className='bg_frame__1 w-full mb-28'>
                     <div className='flex flex-col items-center gap-16 w-full py-20 px-8 lg:px-20'>
-                      <Zoom cascade damping={0.3}>
+                      <Fade cascade damping={0.3}>
                         <div>
                           <Title1 text={"What people have to say"} />
                         </div>
@@ -343,7 +348,7 @@ const Home = () => {
                         <div className='block lg:hidden'>
                           <Heading text1={" Loved by learners and professionals"} text2={"from hundreds of companies"} colorWhite />
                         </div>
-                      </Zoom>
+                      </Fade>
 
                         <div className='relative border border-[#00A2FD] py-16 lg:px-8 w-full rounded-[20px]'>
                           <div>
