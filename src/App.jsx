@@ -8,6 +8,7 @@ import ProjectDetails from './pages/projects/ProjectDetails'
 import ProjectPaths from './pages/projects/ProjectPaths'
 import About from './pages/About'
 import ProjectCollaborators from './pages/ProjectCollaborators'
+import Pricing from './pages/Pricing'
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
               <>
                 <Route path='/about' element={<About />} />
                 <Route path='/project-collaborators' element={<ProjectCollaborators />} />
+                <Route path='/pricing-plan' element={<Pricing />} />
               </>
 
               <Route path='/signup' element={<SignUp />} />

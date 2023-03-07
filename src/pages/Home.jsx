@@ -65,6 +65,23 @@ const Home = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
   };
 
+  const autoToggle_ = true;
+  let setIntervalTime_
+
+
+  function auto_() {
+    setIntervalTime_ = setInterval (nextBtn, 4000)
+  };
+
+
+  useEffect(() => {
+    if(autoToggle_) {
+        auto_()
+    } 
+
+    return () => clearInterval (setIntervalTime_)
+  }, [current]);
+
 
   // ExploreComponent Slide
   const slideLeft = () => {
@@ -161,7 +178,7 @@ const Home = () => {
                     </Fade>
                   </div>
 
-                  <div className={`flex-[0.5] relative flex items-center justify-end w-full ${showBgImg ? "show_bg__img" : "opacity-0"}`}>
+                  <div className={`flex-[0.5] relative flex items-center justify-end md:justify-center lg:justify-end w-full ${showBgImg ? "show_bg__img" : "opacity-0"}`}>
                       <div className='relative rounded-t-full rounded-b-full overflow-hidden mt-4 lg:mt-24'>
                         <img src={bgImg} alt="" className='w-[100%] lg:w-[300px] h-[400px] lg:h-[500px] object-cover' />
                       </div>

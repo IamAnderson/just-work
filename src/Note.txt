@@ -3,7 +3,7 @@
         
         <div className='flex flex-col gap-24 w-full pb-24'>
             <div className='relative flex flex-col bg-[#fff] w-full'>
-              <HeaderComponent1 text={""} text1={""} />
+              <HeaderComponent1 text={""} text_={""} text1={""} />
             </div>
         
         </div>

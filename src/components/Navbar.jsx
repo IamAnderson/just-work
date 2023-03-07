@@ -61,7 +61,7 @@ const Navbar = () => {
                     <NavLink to="/project-contribution" style={({ isActive }) => isActive ? activeNav : undefined}>
                         <span className='flex items-center gap-2 text-[#fff] text-[10px] font-[Inter] h-full px-2'> Project Contribution <AiOutlineDown color='#fff' size={"8"} /> </span>
                     </NavLink>
-                    <NavLink to="/pricing" reloadDocument style={({ isActive }) => isActive ? activeNav : undefined}>
+                    <NavLink to="/pricing-plan" reloadDocument style={({ isActive }) => isActive ? activeNav : undefined}>
                         <span className='flex items-center gap-2 text-[#fff] text-[10px] font-[Inter] h-full px-2'> Pricing <AiOutlineDown color='#fff' size={"8"} /> </span>
                     </NavLink>
                     <NavLink to="/success-stories" style={({ isActive }) => isActive ? activeNav : undefined}>
