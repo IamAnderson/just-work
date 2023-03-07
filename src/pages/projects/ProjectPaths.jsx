@@ -32,7 +32,7 @@ const ProjectPaths = () => {
                         </div>
 
                         <div className='project_path__search_box__shadow flex flex-col items-start justify-start gap-4 bg-[#14744C80] w-full py-6 px-4'>
-                            <span className='text-[14px] font-bold leading-[17.07px]'> Search Here </span>
+                            <span className='text-[14px] font-bold leading-[17.07px]'> Search Project by Field </span>
 
                             <div className='flex flex-col items-start justify-start gap-2 w-full'>
                                 <span className='bg-[#14744C] cursor-pointer w-full px-2 py-3'> Data Analytics </span>
@@ -44,6 +44,21 @@ const ProjectPaths = () => {
                                 <span className='bg-[#14744C] cursor-pointer w-full px-2 py-3'> Data Engineering </span>
                                 <span className='bg-[#14744C] cursor-pointer w-full px-2 py-3'> Power Platform Developer </span>
                                 <span className='bg-[#14744C] cursor-pointer w-full px-2 py-3'> Artificial Intelligence </span>
+                            </div>
+                        </div>
+
+                        <div className='project_path__search_box__shadow flex flex-col items-start justify-start gap-4 bg-[#14744C80] w-full py-6 px-4'>
+                            <span className='text-[14px] font-bold leading-[17.07px]'> Search Project by Tools </span>
+
+                            <div className='flex flex-col items-start justify-start gap-2 w-full'>
+                                <span className='bg-[#14744C] cursor-pointer w-full px-2 py-3'> Python, Excel </span>
+                                <span className='bg-[#14744C] cursor-pointer w-full px-2 py-3'> Power BI </span>
+                                <span className='bg-[#14744C] cursor-pointer w-full px-2 py-3'>  Tableau </span>
+                                <span className='bg-[#14744C] cursor-pointer w-full px-2 py-3'> PostgresSQL </span>
+                                <span className='bg-[#14744C] cursor-pointer w-full px-2 py-3'> Power Apps </span>
+                                <span className='bg-[#14744C] cursor-pointer w-full px-2 py-3'> Power Automate </span>
+                                <span className='bg-[#14744C] cursor-pointer w-full px-2 py-3'> Share Point </span>
+                                <span className='bg-[#14744C] cursor-pointer w-full px-2 py-3'> Power Virtual Agent </span>
                             </div>
                         </div>
                     </div>
