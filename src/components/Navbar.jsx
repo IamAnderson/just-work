@@ -24,7 +24,9 @@ const Navbar = () => {
     <div className='fixed top-0 flex items-center justify-between lg:justify-start w-full bg-[#006D44] border-b border-[#fff] h-[64px] px-8 lg:px-16 z-30'>
         <div className="lg:flex-[0.15] flex items-center justify-center lg:border-r border-[#fff] h-full">
             <span className='h-[12px] lg:h-[14px] lg:pr-8'>
-                <img src={logo} alt="" className='h-full w-full object-cover' />
+                <NavLink to="/" reloadDocument>
+                    <img src={logo} alt="" className='h-full w-full object-cover' />
+                </NavLink>
             </span>
         </div>
 

@@ -178,20 +178,43 @@ const Home = () => {
                     </Fade>
                   </div>
 
-                  <div className={`flex-[0.5] relative flex items-center justify-end md:justify-center lg:justify-end w-full ${showBgImg ? "show_bg__img" : "opacity-0"}`}>
+                  <div className={`flex-[0.5] relative flex items-center justify-center lg:justify-end w-full ${showBgImg ? "show_bg__img" : "opacity-0"}`}>
                       <div className='relative rounded-t-full rounded-b-full overflow-hidden mt-4 lg:mt-24'>
                         <img src={bgImg} alt="" className='w-[100%] lg:w-[300px] h-[400px] lg:h-[500px] object-cover' />
                       </div>
 
                       <>
-                      <div className='header_comment__calc flex flex-col gap-4 w-full'>
-                        {commentSlideData.map((item, index) => (
-                          <>
-                            <div className={currentFrame !== index && "frame__animation"} key={index}>
-                              <img src={item.img} alt="" className={`w-[187.55px] lg:w-[378px] h-[53.59px] lg:h-[108px] object-cover ${currentFrame === index && "opacity-[1]"}`} />
-                            </div>
-                          </>
-                        ))}
+                      {/* DESKTOP */}
+                        <div className='header_comment__calc hidden lg:flex flex-col gap-4 w-full'>
+                          {commentSlideData.map((item, index) => (
+                            <>
+                              <div className={currentFrame !== index ? "frame__animation" : undefined} key={index}>
+                                <img src={item.img} alt="" className={`w-[187.55px] lg:w-[378px] h-[53.59px] lg:h-[108px] object-cover ${currentFrame === index ? "opacity-[1]" : undefined}`} />
+                              </div>
+                            </>
+                          ))}
+                        </div>
+
+                        {/* TAB */}
+                        <div className='absolute left-40 md:flex flex-col gap-4 hidden lg:hidden'>
+                          {commentSlideData.map((item, index) => (
+                            <>
+                              <div className={currentFrame !== index ? "frame__animation" : undefined} key={index}>
+                                <img src={item.img} alt="" className={`w-[187.55px] lg:w-[378px] h-[53.59px] lg:h-[108px] object-cover ${currentFrame === index ? "opacity-[1]" : undefined}`} />
+                              </div>
+                            </>
+                          ))}
+                        </div>
+
+                        {/* MOBILE */}
+                        <div className='absolute flex flex-col gap-4 w-full md:hidden'>
+                          {commentSlideData.map((item, index) => (
+                            <>
+                              <div className={currentFrame !== index ? "frame__animation" : undefined} key={index}>
+                                <img src={item.img} alt="" className={`w-[187.55px] lg:w-[378px] h-[53.59px] lg:h-[108px] object-cover ${currentFrame === index ? "opacity-[1]" : undefined}`} />
+                              </div>
+                            </>
+                          ))}
                         </div>
                       </>
                   </div>

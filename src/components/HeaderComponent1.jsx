@@ -16,7 +16,7 @@ const HeaderComponent1 = ({ text, text_, text1 }) => {
                             <LinkHeaderText txtLight text={text_} />
                         </div>
                     </div>
-                    <div className='text-[18px] text-[#fff] text-center font-[Montserrat] font-medium leading-[40px] w-[520px]'>
+                    <div className='text-[18px] text-[#fff] text-center font-[Montserrat] font-medium leading-[40px] w-[275px] md:w-[400px] lg:w-[520px]'>
                         {text1}
                     </div>
                 </div>

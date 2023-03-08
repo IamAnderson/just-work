@@ -9,8 +9,8 @@ import logo1 from "../assets/logo2.png";
 const Footer = () => {
   return (
     <>
-        <div className='bg-[#14744C] text-[#fff] w-full py-12 lg:pt-16 lg:pb-8 '>
-            <div className='flex flex-col lg:flex-row items-center lg:items-start justify-start lg:justify-between gap-8 lg:gap-0 w-full px-8 lg:px-24'>
+        <div className='bg-[#14744C] text-[#ABDFFC] w-full py-12 lg:pt-16 lg:pb-8 '>
+            <div className='flex flex-col lg:flex-row items-start justify-start lg:justify-between gap-8 lg:gap-0 w-full px-8 lg:px-24'>
                 <Fade cascade damping={0.25}>
                     <div className='flex flex-col items-start gap-6 w-[313px]'>
                         <span className='hidden lg:block h-[20px] pr-8'>
@@ -44,7 +44,7 @@ const Footer = () => {
                     </div>
 
                     <div className='flex flex-col items-center lg:items-start gap-4 lg:gap-6 w-full lg:w-[211px]'>
-                        <span className='text-[14px] lg:text-[16px] font-extrabold leading-[] lg:leading-[19.5px]'> Projects </span>
+                        <span className='text-[14px] lg:text-[16px] font-extrabold text-[#fff] lg:leading-[19.5px]'> Projects </span>
                         <div className='flex flex-col justify-start items-center lg:items-start gap-2 w-full'>
                             <Link to={``}>
                                 <li className='text-[10px] lg:text-[14px] leading-[24px]'> Data Analytics </li>
@@ -77,7 +77,7 @@ const Footer = () => {
                     </div>
 
                     <div className='flex flex-col items-center lg:items-start gap-4 lg:gap-6 w-full lg:w-[126px]'>
-                        <span className='text-[14px] lg:text-[16px] font-extrabold leading-[] lg:leading-[19.5px]'> Quicklinks </span>
+                        <span className='text-[14px] lg:text-[16px] font-extrabold text-[#fff] lg:leading-[19.5px]'> Quicklinks </span>
                         <div className='flex flex-col justify-start items-center lg:items-start gap-2 w-full'>
                             <Link to="/projects">
                                 <li className='text-[10px] lg:text-[14px] leading-[24px]'> Projects </li>
@@ -109,29 +109,46 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <div className='flex flex-col items-center lg:items-start gap-4 lg:gap-6 w-full lg:w-[129px]'>
-                        <span className='text-[14px] lg:text-[16px] font-extrabold leading-[] lg:leading-[19.5px]'> Contact Us </span>
-                        <div className='flex flex-col justify-start items-center lg:items-start gap-2 w-full'>
-                            <li className='text-[10px] lg:text-[14px] leading-[24px]'> Address </li>
-                            <li className='text-[10px] lg:text-[14px] leading-[24px]'> info@amdari.io </li>
+                    <div className='flex flex-col items-start gap-8 lg:gap-0 lg:justify-between lg:h-[320px] w-full'>
+                        <div className='flex flex-col items-start gap-4 lg:gap-6 w-full lg:w-[129px]'>
+                            <span className='text-[14px] lg:text-[16px] font-extrabold text-[#fff] lg:leading-[19.5px]'> Contact Us </span>
+                            <div className='flex flex-col justify-start items-start gap-2 w-full'>
+                                <li className='text-[10px] lg:text-[14px] leading-[24px]'> Address </li>
+                                <li className='text-[10px] lg:text-[14px] leading-[24px]'> info@amdari.io </li>
+                            </div>
+                        </div>
+
+                        <div className='flex flex-col items-start gap-4 lg:gap-6 w-full lg:w-[129px]'>
+                            <span className='text-[14px] lg:text-[16px] font-extrabold text-[#fff] lg:leading-[19.5px] w-[256px]'> Subscribe to Our Newsletter </span>
+                            <div>
+                                <form 
+                                className='flex items-center h-[33px] lg:h-[44px] w-[296px] bg-[#fff] rounded-[40px] overflow-hidden'>
+                                    <input type="email" placeholder='Your Email' className='border-none text-[12px] text-[#333333] focus:outline-none leading-[14.63px] h-full w-full px-3' />
+                                    <button className='h-full'>
+                                        <div className='pricing_checkmark__gradient flex justify-center items-center text-[12px] text-[#fff] leading-[14.63px] w-[88px] h-full rounded-[80px] overflow-hidden'>
+                                            Send
+                                        </div>
+                                    </button>
+                                </form>
+                            </div>
                         </div>
                     </div>
 
                     <div className='flex items-center justify-center gap-4 w-full lg:hidden'>
                         <Link to="">
-                            <span className='flex items-center justify-center w-[24px] h-[24px] bg-[#fff] rounded-[4px]'> <FaTwitter color="#000066" size={"14"} /> </span>
+                            <span className='flex items-center justify-center w-[24px] h-[24px] bg-[#fff] rounded-[4px]'> <FaTwitter color="#14744C" size={"14"} /> </span>
                         </Link>
 
                         <Link to="">
-                            <span className='flex items-center justify-center w-[24px] h-[24px] bg-[#fff] rounded-[4px]'> <FaFacebookF color="#000066" size={"14"} /> </span>
+                            <span className='flex items-center justify-center w-[24px] h-[24px] bg-[#fff] rounded-[4px]'> <FaFacebookF color="#14744C" size={"14"} /> </span>
                         </Link>
 
                         <Link to="">
-                            <span className='flex items-center justify-center w-[24px] h-[24px] bg-[#fff] rounded-[4px]'> <BsInstagram color="#000066" size={"14"} /> </span>
+                            <span className='flex items-center justify-center w-[24px] h-[24px] bg-[#fff] rounded-[4px]'> <BsInstagram color="#14744C" size={"14"} /> </span>
                         </Link>
 
                         <Link to="">
-                            <span className='flex items-center justify-center w-[24px] h-[24px] bg-[#fff] rounded-[4px]'> <FaLinkedinIn color="#000066" size={"14"} /> </span>
+                            <span className='flex items-center justify-center w-[24px] h-[24px] bg-[#fff] rounded-[4px]'> <FaLinkedinIn color="#14744C" size={"14"} /> </span>
                         </Link>
                     </div>
                 </Fade>

@@ -69,13 +69,13 @@
     }
 }
 
-@media screen and (max-width: 450px) {
+/* @media screen and (max-width: 450px) {
     .header_comment__calc{
         position: absolute;
         top: 100px;
         right: -10px;
     }
-}
+} */
 
 .show_bg__img{
     opacity: 1;

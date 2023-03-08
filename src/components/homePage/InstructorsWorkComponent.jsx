@@ -26,7 +26,7 @@ const InstructorsWorkComponent = () => {
             <Title widthVar widthNum={495} text={"Where our instructors and students work"} />
         </>
 
-        <Main className='flex items-center justify-between w-full md:ml-16'>
+        <Main className='flex items-center justify-between w-full'>
             <Fade cascade damping={0.4}>
             <div className='flex items-center w-full border-r-[3px] mr-4 pr-4 lg:pr-0 lg:mr-16 border-[#eeeded]'>
                 <img src={img1} alt="" className='w-[31.89px] lg:w-[55px] h-[31.89px] lg:h-[55px] object-cover' />

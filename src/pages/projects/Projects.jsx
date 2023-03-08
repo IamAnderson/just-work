@@ -23,20 +23,20 @@ const Projects = () => {
             <div className='relative flex flex-col bg-[#fff] w-full mb-20'>
               <div className='header_bg__img flex items-center justify-center h-[400px] w-full'>
                 <div className='flex flex-col items-center justify-start gap-8 w-full'>
-                  <div className='flex flex-col items-center gap-1 w-full'>
+                  <div className='flex flex-col items-center gap-2 lg:gap-1 w-full'>
                     <div>
                       <HeaderTitle text={"All Projects"} />
                     </div>
                     <div>
                       <LinkHeaderText txtLight text={"Projects"} />
                     </div>
-                    <span className='text-[15.51px] lg:text-[18px] text-[#fff] font-medium font-[Montserrat Alternates] text-center leading-[18.91px] lg:leading-[40px] w-full lg:w-[773px]'> Become a step closer to landing your dream tech job. Build real world projects created by industry experts and grow your portfolio. </span>
+                    <span className='text-[15.51px] lg:text-[18px] text-[#fff] font-medium font-[Montserrat Alternates] text-center leading-[18.91px] lg:leading-[40px] w-[261px] md:w-[400px] lg:w-[773px] mt-2 lg:mt-0'> Become a step closer to landing your dream tech job. Build real world projects created by industry experts and grow your portfolio. </span>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className='flex flex-col items-start gap-8 w-full px-4 lg:px-56'>
+            <div className='flex flex-col items-start gap-16 lg:gap-8 w-full px-4 lg:px-56'>
                 <div className='search_box__shadow flex items-center justify-between h-[77px] w-full lg:w-[435px] p-4'>
                     <span className='text-[14px] text-[#A5A5A5] font-bold leading-[17.07px]'> Search Here </span>
                     <div className='flex items-center justify-start gap-2 border border-[#A5A5A5] bg-[#EBEBEB] pr-2'>
@@ -47,7 +47,7 @@ const Projects = () => {
                     </div>
                 </div>
 
-                <div className='grid grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-16 w-full'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-6 lg:gap-16 w-full'>
                     <>
                         {filteredProjects.length === 0 ? (
                             <div className='text-[#333333] text-[24px] font-medium'>
